@@ -1,0 +1,15 @@
+{
+  "source_id": "worldbank_oil_rents_gdp_pct",
+  "resource_name": "oil_rents_gdp_pct.json",
+  "original_url": "https://api.worldbank.org/v2/country/ARG/indicator/NY.GDP.PETR.RT.ZS?format=json&per_page=1000",
+  "downloaded_at": "2026-10-04T18:33:37.861935+00:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "size_bytes": 12026,
+  "sha256": "2422f8587fd09577a0192e3096406c455076d27fa7d6b160cb16f292184c2358",
+  "local_path": "data\\raw\\worldbank\\oil_rents_gdp_pct.json",
+  "data_points": 52,
+  "min_year": 1970,
+  "max_year": 2021,
+  "success": true
+}

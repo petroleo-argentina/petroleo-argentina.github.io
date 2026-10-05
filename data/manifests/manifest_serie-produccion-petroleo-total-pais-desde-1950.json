@@ -1,0 +1,12 @@
+{
+  "source_id": "produccion_1950",
+  "resource_name": "serie-produccion-petroleo-total-pais-desde-1950.csv",
+  "original_url": "http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/serie-produccion-petroleo-total-pais-desde-1950.csv",
+  "downloaded_at": "2026-10-04T18:27:23.423482+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 1343,
+  "sha256": "fbf7ae8479cd2d8d912bc077d0ee66da16fdea31da4f6bec83bb4388d24acab8",
+  "local_path": "data\\raw\\energia\\serie-produccion-petroleo-total-pais-desde-1950.csv",
+  "success": true
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "id": "loma_campana",
+    "nombre": "Loma Campana",
+    "operador": "YPF S.A. / Chevron",
+    "lat": -38.305,
+    "lon": -68.96,
+    "radio_km": 11,
+    "prod_2025_bpd": 92400,
+    "prod_2025_m3_mes": 445000,
+    "pozos_activos": 740,
+    "tipo": "Shale Oil",
+    "destacado": "El yacimiento no convencional más grande de América Latina fuera de EE.UU."
+  },
+  {
+    "id": "la_amarga_chica",
+    "nombre": "La Amarga Chica",
+    "operador": "YPF S.A. / Petronas",
+    "lat": -38.21,
+    "lon": -68.865,
+    "radio_km": 9,
+    "prod_2025_bpd": 68300,
+    "prod_2025_m3_mes": 328000,
+    "pozos_activos": 390,
+    "tipo": "Shale Oil",
+    "destacado": "Segundo mayor productor de Vaca Muerta con pozos de altísima productividad inicial."
+  },
+  {
+    "id": "bandurria_sur",
+    "nombre": "Bandurria Sur",
+    "operador": "YPF S.A. / Schlumberger / Equinor",
+    "lat": -38.385,
+    "lon": -68.995,
+    "radio_km": 8,
+    "prod_2025_bpd": 54100,
+    "prod_2025_m3_mes": 260000,
+    "pozos_activos": 260,
+    "tipo": "Shale Oil",
+    "destacado": "Bloque clave del hub sur operado con ramas horizontales de hasta 3.800 metros."
+  },
+  {
+    "id": "bajada_del_palo_oeste",
+    "nombre": "Bajada del Palo Oeste",
+    "operador": "Vista Energy",
+    "lat": -38.16,
+    "lon": -68.53,
+    "radio_km": 10,
+    "prod_2025_bpd": 61200,
+    "prod_2025_m3_mes": 294000,
+    "pozos_activos": 280,
+    "tipo": "Shale Oil",
+    "destacado": "El mayor desarrollo privado en Vaca Muerta con récords de velocidad de perforación."
+  },
+  {
+    "id": "la_calera",
+    "nombre": "La Calera",
+    "operador": "Pluspetrol / YPF",
+    "lat": -38.37,
+    "lon": -68.99,
+    "radio_km": 8,
+    "prod_2025_bpd": 28500,
+    "prod_2025_m3_mes": 137000,
+    "pozos_activos": 135,
+    "tipo": "Wet Gas & Light Oil",
+    "destacado": "Desarrollo masivo en ventana de condensados y petróleo volátil."
+  },
+  {
+    "id": "fortin_de_piedra",
+    "nombre": "Fortín de Piedra",
+    "operador": "Tecpetrol",
+    "lat": -38.45,
+    "lon": -69.21,
+    "radio_km": 10,
+    "prod_2025_bpd": 18200,
+    "prod_2025_m3_mes": 87500,
+    "pozos_activos": 160,
+    "tipo": "Shale Gas & Condensado",
+    "destacado": "El principal productor de gas del país con producción de líquidos asociada."
+  }
+]

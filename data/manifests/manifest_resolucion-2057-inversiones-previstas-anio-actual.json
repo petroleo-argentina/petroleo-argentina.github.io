@@ -1,0 +1,12 @@
+{
+  "source_id": "inversiones_upstream",
+  "resource_name": "resolucion-2057-inversiones-previstas-anio-actual.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/8ab4098a-842b-42f7-bf1a-b7b3637d226d/download/resolucin-2057-inversiones-previstas-ao-actual.csv",
+  "downloaded_at": "2026-10-04T18:35:35.747842+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 4777697,
+  "sha256": "f5c435d97bac24117a3bd4395ccc001786372e9a35a1628e8b0551602c44e68f",
+  "local_path": "data\\raw\\energia\\resolucion-2057-inversiones-previstas-anio-actual.csv",
+  "success": true
+}

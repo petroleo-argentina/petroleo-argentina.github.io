@@ -1,0 +1,12 @@
+{
+  "source_id": "trayectorias_vaca_muerta",
+  "resource_name": "trayectorias-de-pozo-vaca-muerta.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/f5c0b5a5-b402-44d7-8fe0-f9e4fcb78b8d/resource/94741ac7-4f46-4efe-b112-d3f82a4ef7c5/download/trayectorias-de-pozo-vaca-muerta.csv",
+  "downloaded_at": "2026-10-04T18:35:34.332597+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 40497312,
+  "sha256": "83093dc4b7bad3b7ab54449bbfb074264f3b6cb17d675c9494a2336403db3034",
+  "local_path": "data\\raw\\energia\\trayectorias-de-pozo-vaca-muerta.csv",
+  "success": true
+}

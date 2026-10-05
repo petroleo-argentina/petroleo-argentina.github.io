@@ -1,0 +1,12 @@
+{
+  "source_id": "petrodb",
+  "resource_name": "argentina/well_events.parquet",
+  "original_url": "https://huggingface.co/datasets/sumpalabs/petrodb/resolve/main/argentina/well_events.parquet?download=true",
+  "downloaded_at": "2026-10-04T18:24:53.680740+00:00",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "size_bytes": 2117040,
+  "sha256": "1aea1e4d46fa3fbc9d3d643c7d5ae3e214aa6a7b03b5ac4326f573cfdb2bcca8",
+  "local_path": "data\\raw\\petrodb\\well_events.parquet",
+  "success": true
+}

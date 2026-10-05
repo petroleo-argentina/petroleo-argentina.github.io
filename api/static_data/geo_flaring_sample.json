@@ -1,0 +1,44 @@
+[
+  {
+    "nombre": "Antorcha EPF Bajo del Choique",
+    "operador": "ExxonMobil",
+    "lat": -37.7132,
+    "lon": -69.1416,
+    "tipo": "Antorcha declarada"
+  },
+  {
+    "nombre": "Batería Loma Campana Este",
+    "operador": "YPF S.A.",
+    "lat": -38.291,
+    "lon": -68.945,
+    "tipo": "Antorcha declarada"
+  },
+  {
+    "nombre": "Planta Compresora La Calera",
+    "operador": "Pluspetrol",
+    "lat": -38.362,
+    "lon": -69.012,
+    "tipo": "Chimenea de quema"
+  },
+  {
+    "nombre": "Venteo de Control Bandurria Sur",
+    "operador": "YPF S.A.",
+    "lat": -38.375,
+    "lon": -68.98,
+    "tipo": "Antorcha declarada"
+  },
+  {
+    "nombre": "Batería Bajada del Palo Oeste",
+    "operador": "Vista Energy",
+    "lat": -38.152,
+    "lon": -68.518,
+    "tipo": "Antorcha declarada"
+  },
+  {
+    "nombre": "Estación Compresora Loma de la Costa",
+    "operador": "Tecpetrol",
+    "lat": -46.2527,
+    "lon": -67.6322,
+    "tipo": "Chimenea de quema (Chubut)"
+  }
+]

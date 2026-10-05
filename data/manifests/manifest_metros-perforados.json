@@ -1,0 +1,12 @@
+{
+  "source_id": "perforacion_pozos",
+  "resource_name": "metros-perforados.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/7ea2ac77-d7a0-4129-9fbf-6f1a25d94e21/resource/712805f3-35d4-4825-93c6-98d03aeca203/download/metros-perforados.csv",
+  "downloaded_at": "2026-10-04T18:36:29.047440+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 69583156,
+  "sha256": "0c7a798a9b019628bd9acde19b39e6befd228230acd8be69297816a7db492a1b",
+  "local_path": "data\\raw\\energia\\metros-perforados.csv",
+  "success": true
+}

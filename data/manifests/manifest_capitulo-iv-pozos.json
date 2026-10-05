@@ -1,0 +1,12 @@
+{
+  "source_id": "padron_pozos_cap4_oficial",
+  "resource_name": "capitulo-iv-pozos.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/c846e79c-026c-4040-897f-1ad3543b407c/resource/cb5c0f04-7835-45cd-b982-3e25ca7d7751/download/capitulo-iv-pozos.csv",
+  "downloaded_at": "2026-10-04T18:35:32.077952+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 34133626,
+  "sha256": "44c466133c7881753d49204bebf8e0ff3d0960c92ec7d7c0c63868946fd78e87",
+  "local_path": "data\\raw\\energia\\capitulo-iv-pozos.csv",
+  "success": true
+}

@@ -1,0 +1,22 @@
+# Security: Private credentials
+.env
+.env*.local
+frontend/config.js
+frontend/config.local.js
+
+# Large raw datasets (avoid GitHub 100MB file limit)
+data/raw/
+data/staging/
+
+# Python cache & test artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs & temp
+*.log
+logs/
+scratch/

@@ -1,0 +1,12 @@
+{
+  "source_id": "perforacion_pozos",
+  "resource_name": "pozos-en-perforacion.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/7ea2ac77-d7a0-4129-9fbf-6f1a25d94e21/resource/af6838ef-f675-4409-ac6a-e7c391a5dbab/download/pozos-en-perforacin.csv",
+  "downloaded_at": "2026-10-04T18:36:40.913445+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 68020540,
+  "sha256": "d60c3e8563995719a8ec0c020348ff3f0d4b84b863ae70b3d7e78b9457f288ce",
+  "local_path": "data\\raw\\energia\\pozos-en-perforacion.csv",
+  "success": true
+}

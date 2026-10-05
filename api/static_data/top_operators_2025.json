@@ -1,0 +1,62 @@
+[
+  {
+    "operador":"YPF S.A.",
+    "pet_2025_km3":15842.4,
+    "pozos_activos_2025":2269,
+    "market_share_pct":54.2
+  },
+  {
+    "operador":"VISTA ENERGY ARGENTINA SAU",
+    "pet_2025_km3":3994.3,
+    "pozos_activos_2025":230,
+    "market_share_pct":13.7
+  },
+  {
+    "operador":"PAN AMERICAN ENERGY SL",
+    "pet_2025_km3":1770.4,
+    "pozos_activos_2025":305,
+    "market_share_pct":6.1
+  },
+  {
+    "operador":"SHELL ARGENTINA S.A.",
+    "pet_2025_km3":1570.1,
+    "pozos_activos_2025":172,
+    "market_share_pct":5.4
+  },
+  {
+    "operador":"PLUSPETROL S.A.",
+    "pet_2025_km3":1389.7,
+    "pozos_activos_2025":120,
+    "market_share_pct":4.8
+  },
+  {
+    "operador":"TECPETROL S.A.",
+    "pet_2025_km3":959.4,
+    "pozos_activos_2025":228,
+    "market_share_pct":3.3
+  },
+  {
+    "operador":"PETROLERA EL TREBOL S.A.",
+    "pet_2025_km3":856.6,
+    "pozos_activos_2025":52,
+    "market_share_pct":2.9
+  },
+  {
+    "operador":"CHEVRON ARGENTINA S.R.L.",
+    "pet_2025_km3":803.5,
+    "pozos_activos_2025":41,
+    "market_share_pct":2.7
+  },
+  {
+    "operador":"PLUSPETROL CUENCA NEUQUINA S.R.L.",
+    "pet_2025_km3":726.1,
+    "pozos_activos_2025":45,
+    "market_share_pct":2.5
+  },
+  {
+    "operador":"PAMPA ENERGIA S.A.",
+    "pet_2025_km3":559.4,
+    "pozos_activos_2025":210,
+    "market_share_pct":1.9
+  }
+]

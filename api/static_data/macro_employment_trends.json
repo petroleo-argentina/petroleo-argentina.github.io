@@ -1,0 +1,100 @@
+[
+  {
+    "year": 2010,
+    "puestos_hidrocarburos_neuquen": 152,
+    "oil_rents_gdp_pct": 2.31,
+    "fuel_exports_pct": 7.9,
+    "fuel_imports_pct": 7.89
+  },
+  {
+    "year": 2011,
+    "puestos_hidrocarburos_neuquen": 154,
+    "oil_rents_gdp_pct": 2.75,
+    "fuel_exports_pct": 5.97,
+    "fuel_imports_pct": 12.72
+  },
+  {
+    "year": 2012,
+    "puestos_hidrocarburos_neuquen": 166,
+    "oil_rents_gdp_pct": 2.56,
+    "fuel_exports_pct": 6.23,
+    "fuel_imports_pct": 12.86
+  },
+  {
+    "year": 2013,
+    "puestos_hidrocarburos_neuquen": 187,
+    "oil_rents_gdp_pct": 2.25,
+    "fuel_exports_pct": 4.68,
+    "fuel_imports_pct": 16.15
+  },
+  {
+    "year": 2014,
+    "puestos_hidrocarburos_neuquen": 222,
+    "oil_rents_gdp_pct": 2.09,
+    "fuel_exports_pct": 4.68,
+    "fuel_imports_pct": 16.56
+  },
+  {
+    "year": 2015,
+    "puestos_hidrocarburos_neuquen": 248,
+    "oil_rents_gdp_pct": 0.69,
+    "fuel_exports_pct": 2.54,
+    "fuel_imports_pct": 10.94
+  },
+  {
+    "year": 2016,
+    "puestos_hidrocarburos_neuquen": 234,
+    "oil_rents_gdp_pct": 0.55,
+    "fuel_exports_pct": 2.5,
+    "fuel_imports_pct": 8.41
+  },
+  {
+    "year": 2017,
+    "puestos_hidrocarburos_neuquen": 215,
+    "oil_rents_gdp_pct": 0.66,
+    "fuel_exports_pct": 2.79,
+    "fuel_imports_pct": 8.17
+  },
+  {
+    "year": 2018,
+    "puestos_hidrocarburos_neuquen": 236,
+    "oil_rents_gdp_pct": 1.31,
+    "fuel_exports_pct": 4.12,
+    "fuel_imports_pct": 9.59
+  },
+  {
+    "year": 2019,
+    "puestos_hidrocarburos_neuquen": 256,
+    "oil_rents_gdp_pct": 1.29,
+    "fuel_exports_pct": 3.6,
+    "fuel_imports_pct": 8.54
+  },
+  {
+    "year": 2020,
+    "puestos_hidrocarburos_neuquen": 223,
+    "oil_rents_gdp_pct": 0.68,
+    "fuel_exports_pct": 2.68,
+    "fuel_imports_pct": 6.06
+  },
+  {
+    "year": 2021,
+    "puestos_hidrocarburos_neuquen": 225,
+    "oil_rents_gdp_pct": 1.54,
+    "fuel_exports_pct": 2.64,
+    "fuel_imports_pct": 9.2
+  },
+  {
+    "year": 2022,
+    "puestos_hidrocarburos_neuquen": 245,
+    "oil_rents_gdp_pct": null,
+    "fuel_exports_pct": 6.18,
+    "fuel_imports_pct": 15.69
+  },
+  {
+    "year": 2023,
+    "puestos_hidrocarburos_neuquen": 279,
+    "oil_rents_gdp_pct": null,
+    "fuel_exports_pct": 8.81,
+    "fuel_imports_pct": 10.54
+  }
+]

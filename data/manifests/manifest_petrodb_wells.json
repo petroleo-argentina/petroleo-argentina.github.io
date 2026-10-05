@@ -1,0 +1,12 @@
+{
+  "source_id": "petrodb",
+  "resource_name": "argentina/wells.parquet",
+  "original_url": "https://huggingface.co/datasets/sumpalabs/petrodb/resolve/main/argentina/wells.parquet?download=true",
+  "downloaded_at": "2026-10-04T18:24:48.477851+00:00",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "size_bytes": 8286353,
+  "sha256": "b70798071b3deed9eba4eca0667d90a1cb3be14bb3ed034b8411d1a661bbab0d",
+  "local_path": "data\\raw\\petrodb\\wells.parquet",
+  "success": true
+}

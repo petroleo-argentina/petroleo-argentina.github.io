@@ -1,0 +1,11 @@
+{
+  "account": "ac_3z68n2qr",
+  "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJhIjoiYWNfM3o2OG4ycXIiLCJqdGkiOiJiOWQxZDZjZWZkZjlkNDRiYjk1NWM1NmVjYmU4NDI3NCJ9.Va9R-yCrfzu4PzJuhJHOqsMGorlIDyDx_c4jusDpF3M",
+  "apiBaseUrl": "https://gcp-us-east1.api.carto.com",
+  "connection": "carto_dw",
+  "maps": {
+    "basemapDarkMatter": "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+    "basemapVoyager": "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+    "basemapPositron": "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+  }
+}

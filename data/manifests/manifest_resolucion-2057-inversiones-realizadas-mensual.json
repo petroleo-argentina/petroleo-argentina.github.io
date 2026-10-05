@@ -1,0 +1,12 @@
+{
+  "source_id": "inversiones_upstream",
+  "resource_name": "resolucion-2057-inversiones-realizadas-mensual.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/c0a6f94a-6052-48db-9dc8-4d6ce64ecf62/download/resolucin-2057-inversiones-realizadas-mensual.csv",
+  "downloaded_at": "2026-10-04T18:35:34.956144+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 10602840,
+  "sha256": "881d5e735645b0cc3e0e279e0550d71e34f52422320a2270a812b1c92508d0ef",
+  "local_path": "data\\raw\\energia\\resolucion-2057-inversiones-realizadas-mensual.csv",
+  "success": true
+}

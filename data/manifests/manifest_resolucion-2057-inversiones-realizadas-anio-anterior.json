@@ -1,0 +1,12 @@
+{
+  "source_id": "inversiones_upstream",
+  "resource_name": "resolucion-2057-inversiones-realizadas-anio-anterior.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/83fd2c3f-e0f5-4d56-a3ef-828eac226ba9/resource/285d45e5-1b88-4dae-8e5c-c01843c7c8c0/download/resolucin-2057-inversiones-realizadas-ao-anterior.csv",
+  "downloaded_at": "2026-10-04T18:35:35.382902+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 5512022,
+  "sha256": "512c87dba71e5ce475e15ce648ca5375f9781268a08f92d26bfaf90f2d5452ee",
+  "local_path": "data\\raw\\energia\\resolucion-2057-inversiones-realizadas-anio-anterior.csv",
+  "success": true
+}

@@ -1,0 +1,15 @@
+{
+  "source_id": "worldbank_fuel_exports_merch_pct",
+  "resource_name": "fuel_exports_merch_pct.json",
+  "original_url": "https://api.worldbank.org/v2/country/ARG/indicator/TX.VAL.FUEL.ZS.UN?format=json&per_page=1000",
+  "downloaded_at": "2026-10-04T18:33:39.300338+00:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "size_bytes": 14764,
+  "sha256": "e05671200fc2c053d201596c62b1baa06d6de167b95462739760e4f1a42a9fa8",
+  "local_path": "data\\raw\\worldbank\\fuel_exports_merch_pct.json",
+  "data_points": 59,
+  "min_year": 1962,
+  "max_year": 2024,
+  "success": true
+}

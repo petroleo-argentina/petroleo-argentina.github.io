@@ -1,0 +1,15 @@
+{
+  "source_id": "worldbank_fuel_imports_merch_pct",
+  "resource_name": "fuel_imports_merch_pct.json",
+  "original_url": "https://api.worldbank.org/v2/country/ARG/indicator/TM.VAL.FUEL.ZS.UN?format=json&per_page=1000",
+  "downloaded_at": "2026-10-04T18:33:38.613582+00:00",
+  "http_status": 200,
+  "content_type": "application/json",
+  "size_bytes": 14746,
+  "sha256": "6208d400436846b2e4f9e6180aaa8c58a1594642e6f009d65bf83d52babdfff0",
+  "local_path": "data\\raw\\worldbank\\fuel_imports_merch_pct.json",
+  "data_points": 59,
+  "min_year": 1962,
+  "max_year": 2024,
+  "success": true
+}

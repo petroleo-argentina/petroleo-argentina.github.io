@@ -1,0 +1,118 @@
+[
+  {
+    "id": "oldelval",
+    "nombre": "Oleoducto del Valle (Oldelval)",
+    "tipo": "OLEODUCTO",
+    "origen": "Allen / Puesto Hernández (Neuquén/Río Negro)",
+    "destino": "Puerto Rosales / Bahía Blanca (Buenos Aires)",
+    "capacidad_bpd": "450.000 bpd (Proyecto Duplicar)",
+    "estado": "Operativo / En Expansión",
+    "descripcion": "La principal arteria de evacuación de petróleo de Vaca Muerta hacia las refinerías y la terminal marítima de exportación en el Atlántico.",
+    "path": [
+      [
+        -37.85,
+        -69.75
+      ],
+      [
+        -38.3,
+        -68.96
+      ],
+      [
+        -38.98,
+        -67.99
+      ],
+      [
+        -39.03,
+        -67.57
+      ],
+      [
+        -39.11,
+        -66.5
+      ],
+      [
+        -38.72,
+        -64.1
+      ],
+      [
+        -38.74,
+        -62.3
+      ],
+      [
+        -38.92,
+        -62.07
+      ]
+    ]
+  },
+  {
+    "id": "otasa",
+    "nombre": "Oleoducto Trasandino (Otasa)",
+    "tipo": "OLEODUCTO",
+    "origen": "Puesto Hernández (Neuquén)",
+    "destino": "Refinería Biobío / Talcahuano (Chile - Océano Pacífico)",
+    "capacidad_bpd": "115.000 bpd",
+    "estado": "Reactivado (2023)",
+    "descripcion": "Cruce cordillerano que conecta la Cuenca Neuquina con el Pacífico, permitiendo exportar crudo liviano a Chile y mercados asiáticos.",
+    "path": [
+      [
+        -38.3,
+        -68.96
+      ],
+      [
+        -37.85,
+        -69.75
+      ],
+      [
+        -37.38,
+        -70.52
+      ],
+      [
+        -37.05,
+        -71.15
+      ],
+      [
+        -36.8,
+        -72.0
+      ],
+      [
+        -36.72,
+        -73.12
+      ]
+    ]
+  },
+  {
+    "id": "vm_sur",
+    "nombre": "Proyecto Vaca Muerta Sur (YPF & Consorcio)",
+    "tipo": "OLEODUCTO (EN CONSTRUCCIÓN)",
+    "origen": "Loma Campana (Añelo, Neuquén)",
+    "destino": "Punta Colorada / Golfo San Matías (Río Negro)",
+    "capacidad_bpd": "390.000 bpd",
+    "estado": "En construcción / Financiado RIGI",
+    "descripcion": "Nuevo ducto de 570 km dedicado íntegramente a la exportación de gran calado (VLCC) en aguas profundas del Atlántico.",
+    "path": [
+      [
+        -38.3,
+        -68.96
+      ],
+      [
+        -38.6,
+        -68.1
+      ],
+      [
+        -39.2,
+        -67.2
+      ],
+      [
+        -39.8,
+        -66.1
+      ],
+      [
+        -40.9,
+        -65.3
+      ],
+      [
+        -41.7,
+        -65.02
+      ]
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "source_id": "reservas_hidrocarburos",
+  "resource_name": "reservas_al_31-12-2024.zip",
+  "original_url": "http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/mercado_hidrocarburos/informacion_estadistica/reservas/reservas_al_31-12-2024.zip",
+  "downloaded_at": "2026-10-04T18:35:35.922904+00:00",
+  "http_status": 200,
+  "content_type": "application/zip",
+  "size_bytes": 314161,
+  "sha256": "ff3dfe8bb14012dfc6be04ac3c44438edc0f5fd8529e3beff0510cbdf51df8bf",
+  "local_path": "data\\raw\\energia\\reservas_al_31-12-2024.zip",
+  "success": true
+}

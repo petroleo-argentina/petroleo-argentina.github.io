@@ -1,0 +1,12 @@
+{
+  "source_id": "petrodb",
+  "resource_name": "argentina/well_operator_history.parquet",
+  "original_url": "https://huggingface.co/datasets/sumpalabs/petrodb/resolve/main/argentina/well_operator_history.parquet?download=true",
+  "downloaded_at": "2026-10-04T18:24:50.989576+00:00",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "size_bytes": 611047,
+  "sha256": "4da9b9fe16e6fefa73f668dab1e4867f15f938f8301105c0a102f2d50c8078c3",
+  "local_path": "data\\raw\\petrodb\\well_operator_history.parquet",
+  "success": true
+}

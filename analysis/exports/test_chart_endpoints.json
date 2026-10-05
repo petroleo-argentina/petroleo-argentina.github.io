@@ -1,0 +1,126 @@
+[
+  {
+    "endpoint": "/api/timeline",
+    "variable": "timelineData",
+    "status": "OK",
+    "count": 76,
+    "sample": [
+      {
+        "anio": 1950,
+        "prod_pet_miles_m3": 3730.0,
+        "bpd": 64277.0,
+        "fuente": "OFICIAL_HISTORICA"
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/production/monthly",
+    "variable": "monthlyProdData",
+    "status": "OK",
+    "count": 240,
+    "sample": [
+      {
+        "mes_id": "2006-01",
+        "anio": 2006,
+        "mes": 1,
+        "pet_no_conv_miles_m3": 1.07,
+        "pet_conv_miles_m3": 1946.54,
+        "pet_total_miles_m3": 3019.66,
+        "pozos_no_conv_activos": 38,
+        "pozos_conv_activos": 13547,
+        "total_pozos_activos": 19678,
+        "share_no_conv_pct": 0.0
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/fractures/trends",
+    "variable": "fracturesTrendsData",
+    "status": "MISSING KEYS: ['longitud_horizontal_media_m', 'etapas_fractura_media', 'arena_total_tn_media']",
+    "count": 10,
+    "sample": [
+      {
+        "anio": 2016,
+        "total_fracturas": 117,
+        "pozos_fracturados": 117,
+        "avg_longitud_horizontal_m": 1296.0,
+        "avg_etapas": 16.3,
+        "avg_arena_tn": 3349.0,
+        "avg_agua_m3": 18535.0
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/cohorts",
+    "variable": "cohortsData",
+    "status": "MISSING KEYS: ['anio_cohorte', 'tipo_recurso', 'mes_relativo', 'mediana_m3_mes']",
+    "count": 356,
+    "sample": [
+      {
+        "cohorte": 2015,
+        "mes_vida": 0,
+        "n_pozos": 353,
+        "mediana_prod_m3": 41.8,
+        "media_prod_m3": 168.9,
+        "p25_prod_m3": 5.3,
+        "p75_prod_m3": 186.5
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/macro/trends",
+    "variable": "macroTrendsData",
+    "status": "MISSING KEYS: ['anio', 'empleo_neuquen_puestos', 'exportaciones_petroleo_pct_total', 'renta_petrolera_pct_pbi']",
+    "count": 14,
+    "sample": [
+      {
+        "year": 2010,
+        "puestos_hidrocarburos_neuquen": 152,
+        "oil_rents_gdp_pct": 2.31,
+        "fuel_exports_pct": 7.9,
+        "fuel_imports_pct": 7.89
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/geo/concessions",
+    "variable": "concessionsGeo",
+    "status": "MISSING KEYS: ['features']",
+    "count": 6,
+    "sample": [
+      {
+        "id": "loma_campana",
+        "nombre": "Loma Campana",
+        "operador": "YPF S.A. / Chevron",
+        "lat": -38.305,
+        "lon": -68.96,
+        "radio_km": 11,
+        "prod_2025_bpd": 92400,
+        "prod_2025_m3_mes": 445000,
+        "pozos_activos": 740,
+        "tipo": "Shale Oil",
+        "destacado": "El yacimiento no convencional más grande de América Latina fuera de EE.UU."
+      }
+    ]
+  },
+  {
+    "endpoint": "/api/wells/map",
+    "variable": "wellsMap",
+    "status": "MISSING KEYS: ['features']",
+    "count": 4000,
+    "sample": [
+      {
+        "idpozo": 164941,
+        "sigla": "VIS.Nq.BPO-2801(h)",
+        "empresa": "VISTA ENERGY ARGENTINA SAU",
+        "provincia": "Neuquén",
+        "yacimiento": "BAJADA DEL PALO OESTE",
+        "tipo_recurso": "NO CONVENCIONAL",
+        "lat": -38.15683,
+        "lon": -68.52031,
+        "anio_primera_prod": 2024,
+        "prod_2025_m3": 151409.0
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "source_id": "petrodb_monthly_production",
+  "year": 2007,
+  "resource_name": "argentina/monthly_production/anio=2007/data.parquet",
+  "original_url": "https://huggingface.co/datasets/sumpalabs/petrodb/resolve/main/argentina/monthly_production/anio=2007/data.parquet?download=true",
+  "downloaded_at": "2026-10-04T18:29:26.187215+00:00",
+  "http_status": 200,
+  "size_bytes": 5952744,
+  "sha256": "e9a475dda1e6d07bd8fe6c218cf1f74db79dba65aabdcd64a0504653818fb868",
+  "local_path": "data\\raw\\petrodb\\monthly_production\\anio=2007\\data.parquet",
+  "success": true
+}

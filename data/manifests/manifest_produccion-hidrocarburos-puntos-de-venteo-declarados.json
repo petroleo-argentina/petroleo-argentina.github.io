@@ -1,0 +1,12 @@
+{
+  "source_id": "puntos_venteo",
+  "resource_name": "produccion-hidrocarburos-puntos-de-venteo-declarados.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/530bb019-32f4-4eaf-b550-1fc05f8b129f/resource/c3812323-0c38-43b7-8bc6-f05fb5113626/download/produccin-hidrocarburos-puntos-de-venteo-declarados.csv",
+  "downloaded_at": "2026-10-04T18:35:45.228931+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 257567,
+  "sha256": "c1b5e6178edef8f5370cb75bbd60751481ba5de752ba7713d9d07921bc711b52",
+  "local_path": "data\\raw\\ambiente\\produccion-hidrocarburos-puntos-de-venteo-declarados.csv",
+  "success": true
+}

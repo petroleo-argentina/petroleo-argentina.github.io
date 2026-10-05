@@ -1,0 +1,12 @@
+{
+  "source_id": "instalaciones",
+  "resource_name": "instalaciones-hidrocarburos-ductos-res-319-93.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/84681f81-dbbb-49eb-be30-e61778736ad9/resource/857bd3ad-9a8b-4cf9-8e25-a8bc73f3282f/download/instalaciones-hidrocarburos-ductos-res-319-93.csv",
+  "downloaded_at": "2026-10-04T18:35:59.347499+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 277226217,
+  "sha256": "483aac2702d8892ae532b883c6773c3d378241e56d68deb291ec50154415d1f6",
+  "local_path": "data\\raw\\energia\\instalaciones-hidrocarburos-ductos-res-319-93.csv",
+  "success": true
+}

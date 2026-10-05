@@ -1,0 +1,7 @@
+Recurso: argentinosaurus-guia.png
+Creado mediante la herramienta integrada image_gen para este proyecto.
+Ilustración estilizada; no es una reconstrucción científica. No se utilizó una imagen de personaje comercial como referencia. No se garantiza exclusividad ni se afirma que sea dominio público.
+El PNG es estático y contiene transparencia. La demo HTML lo anima mediante CSS; no incluye animación articulada por fotogramas.
+
+Prompt utilizado:
+Use case: illustration-story. Create one original Argentinosaurus mascot for an Argentine petroleum data storytelling website, not based on any existing cartoon or franchise. Full body compact friendly quadrupedal long-necked titanosaur, small head, long tapering tail curling slightly toward body, four sturdy legs, no horns or dorsal plates. Three-quarter view facing right, warm intelligent expression, restrained editorial hand-drawn digital illustration with clean dark outlines, muted teal skin and sandy golden underside, subtle texture, readable at 120 pixels. Elegant and approachable for adults, not a baby toy. Stand naturally, eyes open. Actual transparent background, no ground, no background scene, no shadow rectangle, no text, no speech bubble, no props, no logos. Generous clear margins around entire tail and head. Single character only centered in square canvas. This cutout will be animated gently in CSS and paired with separate HTML speech balloons.

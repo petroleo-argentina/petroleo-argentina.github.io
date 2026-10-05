@@ -1,0 +1,12 @@
+{
+  "source_id": "empleo_departamento",
+  "resource_name": "puestos_depto_priv_clae2.csv",
+  "original_url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-departamento/puestos/puestos_depto_priv_por_clae2.csv",
+  "downloaded_at": "2026-10-04T18:35:44.768847+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 95408283,
+  "sha256": "55394dbd93ac5814c625188214e79f1060f6556a4e1da02595e504138b7e0865",
+  "local_path": "data\\raw\\empleo\\puestos_depto_priv_clae2.csv",
+  "success": true
+}

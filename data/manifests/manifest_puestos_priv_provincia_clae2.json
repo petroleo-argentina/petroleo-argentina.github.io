@@ -1,0 +1,12 @@
+{
+  "source_id": "empleo_provincia",
+  "resource_name": "puestos_priv_provincia_clae2.csv",
+  "original_url": "https://cdn.produccion.gob.ar/cdn-cep/datos-por-provincia/por-provincia-clae2/puestos/puestos_priv.csv",
+  "downloaded_at": "2026-10-04T18:35:42.632342+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 11208967,
+  "sha256": "f5424eace5f769f21731462f60b3816595372839b1d949a2786ac6da2cafe673",
+  "local_path": "data\\raw\\empleo\\puestos_priv_provincia_clae2.csv",
+  "success": true
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Petróleo en Argentina: Del pozo al país — Atlas Cartográfico & Crónica de Datos</title>
+  <meta name="description" content="Atlas interactivo de datos: 75 años de producción petrolera en Argentina, la migración territorial hacia Vaca Muerta y la revolución tecnológica del subsuelo.">
+  
+  <!-- Typography V9: Alegreya (Editorial Serif) + Archivo (Grotesque Sans & Tabular Figures) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./fonts_local.css">
+  
+  <!-- MapLibre GL JS CSS for 3D Terrain & Cartography -->
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  
+  <!-- Custom Editorial CSS -->
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body class="editorial-body">
+
+  <!-- Fullscreen Editorial Opening (Home Splash Screen) -->
+  <div id="hero-splash" class="hero-splash-screen" role="region" aria-label="Portada editorial">
+    <div class="hero-splash-backdrop" aria-hidden="true"></div>
+    <div class="hero-splash-content">
+      <h1 class="hero-title">PETRÓLEO EN ARGENTINA</h1>
+      <h2 class="hero-subtitle">Del pozo al país</h2>
+      <p class="hero-dek">75 años de producción para entender cómo cambió el mapa petrolero argentino.</p>
+      
+      <div class="hero-actions">
+        <button id="btn-start-tour" class="hero-start-btn" title="Iniciar recorrido narrativo" aria-label="Comenzar el recorrido narrativo por los 7 capítulos">
+          <span>Comenzar el recorrido</span>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="hero-footer-meta">
+        <span>Basado en registros oficiales pozo por pozo (Resolución 319/93)</span>
+        <span class="meta-dot">·</span>
+        <span>1950 – 2025</span>
+        <span class="meta-dot">·</span>
+        <span class="hero-photo-credit">
+          <a href="https://commons.wikimedia.org/wiki/File:%22Petrosaurios%22,_Aguada_Pichana,_A%C3%B1elo,_Neuquen,_ARG._-_panoramio_(1).jpg" target="_blank" rel="noopener noreferrer">«Petrosaurios», Aguada Pichana, Añelo</a> — Horacio Fernandez. <a href="https://creativecommons.org/licenses/by/3.0/deed.es" target="_blank" rel="noopener noreferrer">CC BY 3.0</a>. Imagen con tratamiento de viñeta para legibilidad.
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fullscreen Map Canvas -->
+  <div id="scrolly-map" class="fullscreen-map"></div>
+
+  <!-- Editorial Top Masthead (Minimalist & Unobtrusive) -->
+  <header class="editorial-masthead">
+    <div class="masthead-left">
+      <h1 class="masthead-title">Petróleo en Argentina <span class="masthead-sep">/</span> <span class="masthead-sub">Del pozo al país</span></h1>
+    </div>
+
+    <nav class="masthead-nav">
+      <button id="btn-auto-tour" class="nav-text-btn" title="Reproducción continua del relato">
+        <span id="auto-tour-text">Relato continuo</span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- Global Contextual FilterBar (Barra superior de filtros y modos) -->
+  <section class="global-filter-bar" id="global-filter-bar" aria-label="Filtros y modos de exploración">
+    <div class="filter-bar-inner">
+      <!-- Mode Toggle: Relato vs Explorar -->
+      <div class="mode-toggle-group" id="mode-toggle-group">
+        <button class="mode-toggle-btn active" id="btn-mode-relato" title="Vista preparada de cada capítulo" aria-label="Modo Relato: Vista preparada de cada capítulo">
+          <span class="mode-dot">●</span> Relato
+        </button>
+        <button class="mode-toggle-btn" id="btn-mode-explorar" title="Elegí filtros y períodos" aria-label="Modo Explorar: Elegí filtros y períodos">
+          <span class="mode-dot">○</span> Explorar
+        </button>
+      </div>
+
+      <div class="filter-separator"></div>
+
+      <!-- Dynamic Contextual Filter Controls (Injected dynamically) -->
+      <div class="filter-controls-wrap" id="filter-controls-container"></div>
+
+      <!-- Reset Editorial View Button -->
+      <button class="filter-reset-btn" id="btn-reset-filters" title="Restablecer vista editorial, tiempo y filtros del capítulo">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+        <span>Restablecer vista</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Left Editorial Story Column (Floats elegantly over the map) -->
+  <aside class="story-column-wrap" id="story-column-wrap">
+    <div class="story-column" id="active-story-card">
+      
+      <!-- Chapter Metadata Header (Single Line Editorial) -->
+      <div class="column-meta-header" id="chapter-meta-line">
+        <div class="meta-badge-group">
+          <span class="column-step-badge" id="chapter-num">01</span>
+          <span class="column-location-tag" id="chapter-location">ARGENTINA · 1950—2025</span>
+        </div>
+        <div class="header-action-group">
+          <button id="btn-toggle-story" class="panel-icon-btn" title="Plegar/desplegar relato" aria-label="Plegar relato">−</button>
+        </div>
+      </div>
+
+      <!-- Dynamic Editorial Content Area -->
+      <div class="column-content-body" id="chapter-content">
+        <!-- Injected via app.js -->
+      </div>
+
+      <!-- Column Navigation Footer (Minimalist Text Controls) -->
+      <footer class="column-nav-footer">
+        <button id="btn-prev-chapter" class="nav-minimal-link" aria-label="Capítulo anterior">← anterior</button>
+
+        <div class="column-progress-track">
+          <div class="progress-bar-fill" id="story-progress-bar"></div>
+        </div>
+
+        <button id="btn-next-chapter" class="nav-minimal-link" aria-label="Capítulo siguiente">siguiente →</button>
+      </footer>
+    </div>
+  </aside>
+
+  <!-- Independent Floating Argentinosaurus Guide (Bottom Left, Outside Upper Panel) -->
+  <aside id="dino-guide-floating" class="dino-guide-floating" aria-label="Guía conceptual Argentinosaurus">
+    <div class="dino-floating-wrapper" id="dino-floating-wrapper">
+      <div class="dino-floating-figure" id="dino-figure-wrap" aria-hidden="true">
+        <img id="dino-mascot-img" class="dino-floating-img" src="./assets/argentinosaurus-guia.png" alt="Argentinosaurus guía conceptual" width="95" height="95">
+      </div>
+      <div id="dino-speech-bubble" class="dino-floating-bubble" role="status" aria-live="polite">
+        <div class="dino-bubble-header">
+          <span class="dino-bubble-label" id="dino-bubble-label">🦕 UN DATO MÁS</span>
+          <button id="btn-toggle-dino" class="dino-bubble-close-btn" title="Ocultar dato complementario" aria-label="Ocultar dato complementario" aria-pressed="false">−</button>
+        </div>
+        <p id="dino-speech-text" class="dino-bubble-text">
+          Aunque creció un 12,8% en 2025, la producción nacional todavía quedó un <strong class="dino-highlight">5,5% por debajo</strong> del récord histórico de 1998 (49.148 miles de m³).
+        </p>
+        <span id="dino-speech-source" class="dino-source-hint">Fuente: Secretaría de Energía / SESCO (1950—2025)</span>
+      </div>
+    </div>
+    <button id="btn-dino-pill" class="dino-collapsed-pill hidden" title="Mostrar un dato más" aria-label="Mostrar un dato más">
+      <span>🦕 Un dato más</span>
+    </button>
+  </aside>
+
+  <!-- Floating Chart & KPI Overlay Panel (Superpuesto al mapa con jerarquía protagonista) -->
+  <section class="chart-overlay-panel" id="chart-overlay-panel" aria-label="Visualización de datos y métricas">
+    <header class="overlay-header">
+      <div class="overlay-header-info">
+        <span class="overlay-kicker" id="overlay-kicker">MÉTRICA EDITORIAL</span>
+        <h3 class="overlay-title" id="overlay-title">Evolución de la Producción</h3>
+      </div>
+      <div class="overlay-header-actions">
+        <div class="overlay-toggles" id="overlay-view-toggles"></div>
+        <button class="panel-icon-btn" id="btn-toggle-overlay" title="Minimizar panel para ver el mapa" aria-label="Minimizar panel">
+          <span id="overlay-min-icon">−</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Dynamic KPI Section -->
+    <div class="overlay-kpi-block" id="overlay-kpi-container"></div>
+
+    <!-- Chart Visual Canvas Container -->
+    <div class="overlay-chart-area" id="overlay-chart-container">
+      <canvas id="overlay-micro-chart"></canvas>
+      
+      <!-- Special Chapter 05 Stacked Charts Container -->
+      <div class="stacked-charts-box hidden" id="overlay-stacked-charts">
+        <div class="stacked-chart-unit">
+          <div class="stacked-meta-line">
+            <span class="stacked-label">Longitud Lateral Promedio</span>
+            <span class="stacked-unit">metros (m)</span>
+          </div>
+          <canvas id="chart-canvas-length"></canvas>
+        </div>
+        <div class="stacked-chart-unit">
+          <div class="stacked-meta-line">
+            <span class="stacked-label">Etapas de Fractura Promedio</span>
+            <span class="stacked-unit">etapas / pozo</span>
+          </div>
+          <canvas id="chart-canvas-fractures"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay Footer Note & Methodology -->
+    <footer class="overlay-footer">
+      <span class="overlay-source-tag" id="overlay-source-tag">Fuente: Secretaría de Energía · Res. 319/93</span>
+      <span class="overlay-scope-tag" id="overlay-scope-tag">1950—2025</span>
+    </footer>
+  </section>
+
+  <!-- Button to restore overlay if minimized -->
+  <button class="overlay-restore-pill hidden" id="btn-restore-overlay" title="Ver gráfico y métricas">
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+    <span>Ver gráfico y métricas</span>
+  </button>
+
+  <!-- Right Rail Visual Journey Tracker (Recorrido cartográfico con camino SVG) -->
+  <nav class="editorial-vertical-index" id="journey-tracker-nav" aria-label="Recorrido editorial">
+    <div class="journey-container" id="journey-container">
+      <svg class="journey-svg-track" id="journey-svg" viewBox="0 0 36 410" preserveAspectRatio="none">
+        <path class="journey-path-pending" id="journey-pending-path" d=""></path>
+        <path class="journey-path-progress" id="journey-progress-path" d=""></path>
+      </svg>
+      <div class="journey-nodes-wrap" id="journey-nodes">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bottom Timeline Bar (Minimalist hairline scrubber) -->
+  <div class="editorial-timeline-tray" id="timeline-scrubber-bar">
+    <div class="timeline-bar-inner">
+      <button id="btn-play-timeline" class="btn-timeline-play" title="Reproducir evolución temporal">
+        <svg id="play-icon" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        <svg id="pause-icon" class="hidden" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+      </button>
+      
+      <div class="timeline-slider-wrap">
+        <div class="timeline-axis-header">
+          <span class="timeline-axis-caption">LÍNEA TEMPORAL DE PRODUCCIÓN</span>
+          <span class="timeline-axis-year" id="scrubber-year-label">2025</span>
+        </div>
+        <input type="range" id="global-year-slider" min="2006" max="2025" value="2025" step="1">
+        <div class="timeline-ticks-labels">
+          <span>2006</span>
+          <span>2010</span>
+          <span>2014</span>
+          <span>2018</span>
+          <span>2022</span>
+          <span>2025</span>
+        </div>
+      </div>
+
+      <div class="timeline-kpi-reading">
+        <span class="tk-label">EXTRACCIÓN NACIONAL</span>
+        <span class="tk-val" id="scrubber-prod-label">46.438,5 miles de m³</span>
+      </div>
+    </div>
+
+  <!-- Scripts -->
+  <!-- 1. MapLibre GL JS Engine for 3D Terrain & WebGL Cartography -->
+  <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  
+  <!-- 2. Chart.js Engine for Micro-charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  
+  <!-- 3. Embedded Data Bundle for Offline Resiliency -->
+  <script src="./data_bundle.js"></script>
+
+  <!-- 4. Environment Credentials (CARTO Token / Private Config) -->
+  <script>window.APP_CONFIG = window.APP_CONFIG || { CARTO_TOKEN: "", CARTO_API_BASE: "" };</script>
+  <script src="./config.js"></script>
+
+  <!-- 5. Application Logic -->
+  <script src="./app.js"></script>
+
+</body>
+</html>

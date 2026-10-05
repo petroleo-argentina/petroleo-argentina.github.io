@@ -1,0 +1,83 @@
+[
+  {
+    "tipo": "Puerto Exportador",
+    "nombre": "Puerto Rosales / Punta Cigüeña (Bahía Blanca)",
+    "lat": -38.922,
+    "lon": -62.068,
+    "capacidad": "Terminal marítima principal de crudo Medanito de exportación",
+    "icono": "anchor",
+    "cuenca": "Atlántico / Vía Oldelval"
+  },
+  {
+    "tipo": "Puerto Exportador",
+    "nombre": "Caleta Córdova (Chubut)",
+    "lat": -45.753,
+    "lon": -67.362,
+    "capacidad": "Terminal marítima de crudo Escalante (Golfo San Jorge)",
+    "icono": "anchor",
+    "cuenca": "Golfo San Jorge"
+  },
+  {
+    "tipo": "Puerto Exportador",
+    "nombre": "Caleta Olivia (Santa Cruz)",
+    "lat": -46.438,
+    "lon": -67.514,
+    "capacidad": "Monoboya de carga de crudo pesado",
+    "icono": "anchor",
+    "cuenca": "Golfo San Jorge"
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería La Plata (YPF)",
+    "lat": -34.889,
+    "lon": -57.913,
+    "capacidad": "31.000 m³/día (~195.000 bpd) - La mayor del país",
+    "icono": "factory",
+    "empresa": "YPF S.A."
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería Luján de Cuyo (YPF)",
+    "lat": -33.066,
+    "lon": -68.976,
+    "capacidad": "19.000 m³/día (~120.000 bpd)",
+    "icono": "factory",
+    "empresa": "YPF S.A."
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería Campana (Axion Energy)",
+    "lat": -34.16,
+    "lon": -58.946,
+    "capacidad": "15.000 m³/día (~95.000 bpd)",
+    "icono": "factory",
+    "empresa": "Pan American Energy"
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería Dock Sud (Raízen - Shell)",
+    "lat": -34.653,
+    "lon": -58.335,
+    "capacidad": "17.000 m³/día (~108.000 bpd)",
+    "icono": "factory",
+    "empresa": "Raízen Argentina"
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería Bahía Blanca (Trafigura - Puma)",
+    "lat": -38.745,
+    "lon": -62.296,
+    "capacidad": "5.000 m³/día (~31.500 bpd)",
+    "icono": "factory",
+    "empresa": "Trafigura"
+  },
+  {
+    "tipo": "Refinería",
+    "nombre": "Refinería Plaza Huincul (YPF)",
+    "lat": -38.927,
+    "lon": -69.186,
+    "capacidad": "4.200 m³/día (~26.500 bpd) - Ubicada en Neuquén",
+    "icono": "factory",
+    "empresa": "YPF S.A."
+  }
+]

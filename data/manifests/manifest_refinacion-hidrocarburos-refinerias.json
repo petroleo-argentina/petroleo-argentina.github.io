@@ -1,0 +1,12 @@
+{
+  "source_id": "refinacion",
+  "resource_name": "refinacion-hidrocarburos-refinerias.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/a9eed347-78ab-45c0-a489-b227fe42ee1b/resource/fcad1e1a-1cb1-4ef8-8529-ea4ee5ef548a/download/refinacin-hidrocarburos-refineras.csv",
+  "downloaded_at": "2026-10-04T18:35:45.759908+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 6555,
+  "sha256": "1c9adcd683c7902179dc65e8cf7512bbdb6017bd5c237c8c2e36e90db26383e1",
+  "local_path": "data\\raw\\energia\\refinacion-hidrocarburos-refinerias.csv",
+  "success": true
+}

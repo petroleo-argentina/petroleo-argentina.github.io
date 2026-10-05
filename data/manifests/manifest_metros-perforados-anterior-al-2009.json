@@ -1,0 +1,12 @@
+{
+  "source_id": "perforacion_pozos",
+  "resource_name": "metros-perforados-anterior-al-2009.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/7ea2ac77-d7a0-4129-9fbf-6f1a25d94e21/resource/7be8ac99-ad69-496e-9684-4bdc99e82a94/download/metros-perforados-anterior-al-2009.csv",
+  "downloaded_at": "2026-10-04T18:36:29.473564+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 6449540,
+  "sha256": "e8268ce3b77fa072ec5900fe00eb29cd6a67c3c7e67a21d81fdaaf1240c26fef",
+  "local_path": "data\\raw\\energia\\metros-perforados-anterior-al-2009.csv",
+  "success": true
+}

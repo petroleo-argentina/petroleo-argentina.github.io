@@ -1,0 +1,12 @@
+{
+  "source_id": "produccion_1950",
+  "resource_name": "serieproducciondepetroleoenargentinadesde1950.pdf",
+  "original_url": "http://www.energia.gob.ar/contenidos/archivos/Reorganizacion/informacion_del_mercado/publicaciones/mercado_hidrocarburos/produccion_desde_1950/serieproducciondepetroleoenargentinadesde1950.pdf",
+  "downloaded_at": "2026-10-04T18:27:23.467424+00:00",
+  "http_status": 200,
+  "content_type": "application/pdf",
+  "size_bytes": 36018,
+  "sha256": "622c3e3c8298b3b6502500730ec6569d748b0e9c93c8b64cef7fe961e23a0acd",
+  "local_path": "data\\raw\\energia\\serieproducciondepetroleoenargentinadesde1950.pdf",
+  "success": true
+}

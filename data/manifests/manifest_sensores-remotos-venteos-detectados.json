@@ -1,0 +1,12 @@
+{
+  "source_id": "puntos_venteo",
+  "resource_name": "sensores-remotos-venteos-detectados.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/7ef45681-a7de-440c-a343-b7d989261b58/resource/a094f5c6-3ba9-4faf-88f3-726e4ef03a98/download/sensores-remotos-venteos-detectados.csv",
+  "downloaded_at": "2026-10-04T18:35:45.649607+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 4791260,
+  "sha256": "46112ccd2cdeaf80df4470e709e08dbd2e85bcfe580c1e9dcfced7cc0cb3c425",
+  "local_path": "data\\raw\\ambiente\\sensores-remotos-venteos-detectados.csv",
+  "success": true
+}

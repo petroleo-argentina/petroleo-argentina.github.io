@@ -1,0 +1,12 @@
+{
+  "source_id": "produccion_no_convencional_oficial",
+  "resource_name": "produccion-de-pozos-de-gas-y-petroleo-no-convencional.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/c846e79c-026c-4040-897f-1ad3543b407c/resource/b5b58cdc-9e07-41f9-b392-fb9ec68b0725/download/produccin-de-pozos-de-gas-y-petrleo-no-convencional.csv",
+  "downloaded_at": "2026-10-04T18:35:30.413805+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 147109366,
+  "sha256": "3407b9554163220f2ed5ac36f5870ef90c3aa92a205538d6f4e156526a548c4c",
+  "local_path": "data\\raw\\energia\\produccion-de-pozos-de-gas-y-petroleo-no-convencional.csv",
+  "success": true
+}

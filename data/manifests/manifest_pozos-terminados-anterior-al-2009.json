@@ -1,0 +1,12 @@
+{
+  "source_id": "perforacion_pozos",
+  "resource_name": "pozos-terminados-anterior-al-2009.csv",
+  "original_url": "http://datos.energia.gob.ar/dataset/7ea2ac77-d7a0-4129-9fbf-6f1a25d94e21/resource/7d1948c6-6944-4563-bab7-4e2a30fd22b7/download/pozos-terminados-anterior-al-2009.csv",
+  "downloaded_at": "2026-10-04T18:35:37.200826+00:00",
+  "http_status": 200,
+  "content_type": "text/csv",
+  "size_bytes": 6844270,
+  "sha256": "fa3542f2a2c7b9f105872b9340e164b9a310ec83974412dbd13a6eb584197444",
+  "local_path": "data\\raw\\energia\\pozos-terminados-anterior-al-2009.csv",
+  "success": true
+}

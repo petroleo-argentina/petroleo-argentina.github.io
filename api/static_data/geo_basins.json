@@ -1,0 +1,250 @@
+[
+  {
+    "id": "neuquina",
+    "nombre": "Cuenca Neuquina",
+    "provincias": [
+      "Neuquén",
+      "Río Negro",
+      "Mendoza",
+      "La Pampa"
+    ],
+    "centro": [
+      -38.2,
+      -68.9
+    ],
+    "zoom": 7,
+    "shale_epicenter": true,
+    "prod_2025_km3": 33100.0,
+    "share_2025_pct": 71.3,
+    "descripcion": "Epicentro del petróleo argentino. Aloja la formación no convencional Vaca Muerta, responsable del 63% del crudo nacional.",
+    "coords_geojson": [
+      [
+        -71.2,
+        -36.0
+      ],
+      [
+        -68.8,
+        -35.2
+      ],
+      [
+        -67.2,
+        -36.8
+      ],
+      [
+        -66.8,
+        -38.5
+      ],
+      [
+        -67.5,
+        -39.8
+      ],
+      [
+        -69.8,
+        -40.2
+      ],
+      [
+        -71.2,
+        -39.5
+      ],
+      [
+        -71.4,
+        -37.8
+      ],
+      [
+        -71.2,
+        -36.0
+      ]
+    ]
+  },
+  {
+    "id": "golfo_san_jorge",
+    "nombre": "Cuenca Golfo San Jorge",
+    "provincias": [
+      "Chubut",
+      "Santa Cruz"
+    ],
+    "centro": [
+      -46.0,
+      -68.2
+    ],
+    "zoom": 7,
+    "shale_epicenter": false,
+    "prod_2025_km3": 9500.0,
+    "share_2025_pct": 20.5,
+    "descripcion": "La cuna del petróleo argentino desde 1907. Cuenca madura con declinación natural y fuerte presencia de recuperación secundaria y terciaria.",
+    "coords_geojson": [
+      [
+        -71.0,
+        -44.8
+      ],
+      [
+        -67.2,
+        -44.5
+      ],
+      [
+        -65.5,
+        -45.5
+      ],
+      [
+        -65.8,
+        -47.2
+      ],
+      [
+        -68.0,
+        -47.8
+      ],
+      [
+        -71.2,
+        -47.2
+      ],
+      [
+        -71.5,
+        -45.8
+      ],
+      [
+        -71.0,
+        -44.8
+      ]
+    ]
+  },
+  {
+    "id": "cuyana",
+    "nombre": "Cuenca Cuyana",
+    "provincias": [
+      "Mendoza"
+    ],
+    "centro": [
+      -33.5,
+      -68.8
+    ],
+    "zoom": 8,
+    "shale_epicenter": false,
+    "prod_2025_km3": 2100.0,
+    "share_2025_pct": 4.5,
+    "descripcion": "Yacimientos maduros históricos del norte y centro de Mendoza, con crudos pesados que abastecen a la refinería Luján de Cuyo.",
+    "coords_geojson": [
+      [
+        -69.5,
+        -32.2
+      ],
+      [
+        -68.2,
+        -32.5
+      ],
+      [
+        -68.0,
+        -34.5
+      ],
+      [
+        -69.2,
+        -34.8
+      ],
+      [
+        -69.8,
+        -33.5
+      ],
+      [
+        -69.5,
+        -32.2
+      ]
+    ]
+  },
+  {
+    "id": "austral",
+    "nombre": "Cuenca Austral",
+    "provincias": [
+      "Santa Cruz",
+      "Tierra del Fuego"
+    ],
+    "centro": [
+      -52.5,
+      -69.5
+    ],
+    "zoom": 7,
+    "shale_epicenter": false,
+    "prod_2025_km3": 1300.0,
+    "share_2025_pct": 2.8,
+    "descripcion": "Cuenca austral continental y offshore, con predominio de producción gasífera y condensados.",
+    "coords_geojson": [
+      [
+        -72.2,
+        -49.5
+      ],
+      [
+        -68.5,
+        -49.2
+      ],
+      [
+        -67.5,
+        -51.2
+      ],
+      [
+        -66.0,
+        -53.2
+      ],
+      [
+        -67.5,
+        -54.5
+      ],
+      [
+        -69.5,
+        -54.2
+      ],
+      [
+        -72.0,
+        -52.0
+      ],
+      [
+        -72.5,
+        -50.5
+      ],
+      [
+        -72.2,
+        -49.5
+      ]
+    ]
+  },
+  {
+    "id": "noroeste",
+    "nombre": "Cuenca Noroeste",
+    "provincias": [
+      "Salta",
+      "Jujuy"
+    ],
+    "centro": [
+      -23.0,
+      -64.0
+    ],
+    "zoom": 7,
+    "shale_epicenter": false,
+    "prod_2025_km3": 438.5,
+    "share_2025_pct": 0.9,
+    "descripcion": "Yacimientos históricos de alta madurez y complejidad geológica estructural (Acambuco, Campo Durán).",
+    "coords_geojson": [
+      [
+        -65.5,
+        -22.0
+      ],
+      [
+        -63.2,
+        -22.0
+      ],
+      [
+        -63.0,
+        -24.5
+      ],
+      [
+        -64.5,
+        -25.2
+      ],
+      [
+        -65.8,
+        -23.8
+      ],
+      [
+        -65.5,
+        -22.0
+      ]
+    ]
+  }
+]
