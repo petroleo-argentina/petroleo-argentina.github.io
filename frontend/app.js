@@ -175,7 +175,7 @@ const CHAPTERS = [
     getInsight: (state) => {
       const yr = state.year || 2025;
       if (yr === 2025) {
-        return "Argentina volvió a producir más petróleo: 46.438,5 miles de m³ en 2025, un 12,8% más que el año anterior. Pero el récord sigue siendo de 1998. El gráfico permite ver cuánto cayó la producción y cómo empezó a recuperarse.";
+        return "La producción se recuperó, pero el récord sigue siendo de 1998. Compará los años en el gráfico.";
       }
       const item = timelineData.find(d => d.anio === yr);
       const valStr = item ? Number(item.prod_pet_miles_m3).toLocaleString('es-AR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : '—';
@@ -306,10 +306,10 @@ const CHAPTERS = [
             }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 }, maxTicksLimit: 7 } },
+            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 }, maxTicksLimit: 7 } },
             y: {
               grid: { color: 'rgba(255, 255, 255, 0.04)' },
-              ticks: { color: '#8492a6', font: { size: 9 }, callback: (v) => isM3 ? `${(v/1000).toFixed(0)}k` : `${(v/1000).toFixed(0)}k bpd` }
+              ticks: { color: '#8492a6', font: { size: 11 }, callback: (v) => isM3 ? `${(v/1000).toFixed(0)}k` : `${(v/1000).toFixed(0)}k bpd` }
             }
           }
         }
@@ -338,7 +338,7 @@ const CHAPTERS = [
     getInsight: (state) => {
       const yr = state.year || 2025;
       if (yr >= 2023) {
-        return "El mapa también cuenta el cambio. La cuenca Neuquina pasó de aportar el 20,4% del petróleo en 2010 al 64,7% en 2025. El Golfo San Jorge, que durante años ocupó el primer lugar, quedó detrás.";
+        return "La cuenca Neuquina tomó la delantera. Compará su participación con la del Golfo San Jorge.";
       }
       return `En ${yr}, la distribución territorial mostraba una cuota de Neuquén en ascenso progresivo frente a las cuencas convencionales maduras del sur.`;
     },
@@ -421,9 +421,9 @@ const CHAPTERS = [
           scales: {
             x: {
               grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#8492a6', font: { size: 9 }, callback: (v) => isPct ? `${v}%` : `${v}k` }
+              ticks: { color: '#8492a6', font: { size: 11 }, callback: (v) => isPct ? `${v}%` : `${v}k` }
             },
-            y: { grid: { display: false }, ticks: { color: '#EDE8D8', font: { size: 9.5 } } }
+            y: { grid: { display: false }, ticks: { color: '#EDE8D8', font: { size: 11 } } }
           }
         }
       });
@@ -449,7 +449,7 @@ const CHAPTERS = [
     ],
     timelineRange: { min: 2015, max: 2025, defaultYear: 2023, step: 1, ticks: [2015, 2017, 2019, 2021, 2023, 2025] },
     getInsight: (state) => {
-      return "En noviembre de 2023 ocurrió el cruce: por primera vez, el petróleo no convencional superó al convencional. En 2025 ya representaba casi el 63% de la producción. Seguí las dos curvas para ver cuándo se abrió la diferencia.";
+      return "En noviembre de 2023, el no convencional superó al convencional. Las dos curvas muestran cómo se abrió la diferencia.";
     },
     getKPI: (state) => {
       return {
@@ -533,7 +533,7 @@ const CHAPTERS = [
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
-            legend: { labels: { color: '#cbd5e1', font: { size: 9.5 } } },
+            legend: { labels: { color: '#cbd5e1', font: { size: 11 } } },
             tooltip: {
               callbacks: {
                 label: (c) => `${c.dataset.label}: ${Number(c.parsed.y).toLocaleString('es-AR')} ${isVol ? 'miles m³' : '%'}`
@@ -541,10 +541,10 @@ const CHAPTERS = [
             }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 }, maxTicksLimit: 6 } },
+            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 }, maxTicksLimit: 6 } },
             y: {
               grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#8492a6', font: { size: 9 }, callback: (v) => isVol ? `${(v/1000).toFixed(0)}k` : `${v}%` }
+              ticks: { color: '#8492a6', font: { size: 11 }, callback: (v) => isVol ? `${(v/1000).toFixed(0)}k` : `${v}%` }
             }
           }
         }
@@ -573,7 +573,7 @@ const CHAPTERS = [
     getInsight: (state) => {
       const cut = state.filters.paretoCutoff || 50;
       if (cut === 50) {
-        return "La mitad del petróleo de 2025 salió de apenas 912 pozos. Había 26.219 con producción registrada en todo el país. Esa distancia entre unos pocos pozos y el resto ayuda a entender el peso de Vaca Muerta.";
+        return "Muchos pozos, aportes muy distintos. La curva muestra cuántos hacen falta para reunir la mitad del petróleo.";
       } else if (cut === 66.7) {
         return "2.021 pozos (el 7,71% del total) explican las dos terceras partes (66,7%) de la producción total argentina.";
       } else if (cut === 1) {
@@ -645,8 +645,8 @@ const CHAPTERS = [
             }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 } } },
-            y: { min: 0, max: 100, grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 9 }, callback: v => `${v}%` } }
+            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 } } },
+            y: { min: 0, max: 100, grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 11 }, callback: v => `${v}%` } }
           }
         }
       });
@@ -749,7 +749,7 @@ const CHAPTERS = [
               min: 1000,
               max: 3400,
               grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#8492a6', font: { size: 8.5 }, callback: v => `${v}m` }
+              ticks: { color: '#8492a6', font: { size: 11 }, callback: v => `${v}m` }
             }
           }
         }
@@ -780,12 +780,12 @@ const CHAPTERS = [
             tooltip: { callbacks: { label: (c) => `Etapas: ${c.parsed.y.toFixed(1)} etapas` } }
           },
           scales: {
-            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 8.5 } } },
+            x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 } } },
             y: {
               min: 10,
               max: 60,
               grid: { color: 'rgba(255,255,255,0.04)' },
-              ticks: { color: '#8492a6', font: { size: 8.5 } }
+              ticks: { color: '#8492a6', font: { size: 11 } }
             }
           }
         }
@@ -877,14 +877,14 @@ const CHAPTERS = [
           responsive: true,
           maintainAspectRatio: false,
           plugins: {
-            legend: { labels: { color: '#cbd5e1', font: { size: 9 } } },
+            legend: { labels: { color: '#cbd5e1', font: { size: 11 } } },
             tooltip: {
               callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y ? Number(c.parsed.y).toLocaleString('es-AR') + ' m³/mes' : '—'}` }
             }
           },
           scales: {
-            x: { ticks: { color: '#8492a6', font: { size: 8.5 }, maxTicksLimit: 8 }, grid: { display: false } },
-            y: { ticks: { color: '#8492a6', font: { size: 8.5 } }, grid: { color: 'rgba(255,255,255,0.04)' } }
+            x: { ticks: { color: '#8492a6', font: { size: 11 }, maxTicksLimit: 8 }, grid: { display: false } },
+            y: { ticks: { color: '#8492a6', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.04)' } }
           }
         }
       });
@@ -965,12 +965,12 @@ const CHAPTERS = [
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-              legend: { labels: { color: '#cbd5e1', font: { size: 9 } } },
+              legend: { labels: { color: '#cbd5e1', font: { size: 11 } } },
               tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y}%` } }
             },
             scales: {
-              x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 } } },
-              y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 9 }, callback: v => `${v}%` } }
+              x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 } } },
+              y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 11 }, callback: v => `${v}%` } }
             }
           }
         });
@@ -987,8 +987,8 @@ const CHAPTERS = [
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-              x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 } } },
-              y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 9 }, callback: v => `${(v/1000).toFixed(0)}k` } }
+              x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 } } },
+              y: { grid: { color: 'rgba(255,255,255,0.04)' }, ticks: { color: '#8492a6', font: { size: 11 }, callback: v => `${(v/1000).toFixed(0)}k` } }
             }
           }
         });
@@ -1153,7 +1153,7 @@ function renderWorldChart(state) {
         plugins: {
           legend: {
             display: true,
-            labels: { color: '#cbd5e1', font: { size: 9 }, boxWidth: 12 }
+            labels: { color: '#cbd5e1', font: { size: 11 }, boxWidth: 12 }
           },
           tooltip: {
             callbacks: {
@@ -1162,12 +1162,12 @@ function renderWorldChart(state) {
           }
         },
         scales: {
-          x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 9 } } },
+          x: { grid: { display: false }, ticks: { color: '#8492a6', font: { size: 11 } } },
           y: {
             grid: { color: 'rgba(255,255,255,0.04)' },
             ticks: {
               color: '#8492a6',
-              font: { size: 9 },
+              font: { size: 11 },
               callback: v => `${v}`
             }
           }

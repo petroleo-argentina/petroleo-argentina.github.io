@@ -73,3 +73,55 @@ button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid
   .hero-splash-content { animation: none; }
   .hero-splash-screen { transition: none; }
 }
+
+/* Give the data the main reading area; keep the map as geographic context. */
+@media (min-width: 769px) {
+  .story-column-wrap { width: 260px; }
+  .story-headline { font-size: 1.65rem; }
+  .story-lead { font-size: 1rem; line-height: 1.5; }
+  .chart-overlay-panel {
+    width: min(58vw, 900px);
+    max-width: calc(100vw - 370px);
+    right: 76px;
+    height: calc(100dvh - 190px);
+    max-height: none;
+    background: var(--panel-bg-opaque);
+    padding: 20px 24px;
+  }
+  .overlay-chart-area { flex: 1; min-height: 160px; height: auto; }
+  .overlay-header, .overlay-kpi-block, .overlay-footer { flex-shrink: 0; }
+  .overlay-title { font-size: clamp(1.3rem, 1.7vw, 1.8rem); }
+  .overlay-kpi-val { font-size: clamp(1.85rem, 2.7vw, 3rem); }
+  .overlay-kpi-label { font-size: .75rem; margin-top: 6px; }
+  .overlay-kpi-block { flex-wrap: wrap; gap: 10px; padding: 12px 0; background: none; border: 0; }
+  .overlay-header { gap: 12px; }
+  .overlay-header-actions { flex-shrink: 0; }
+  .overlay-footer { font-size: .72rem; }
+}
+@media (min-width: 769px) and (max-width: 1050px) {
+  .chart-overlay-panel { padding: 14px 16px; }
+  .overlay-header { flex-wrap: wrap; }
+}
+@media (max-width: 768px) {
+  .overlay-chart-area { height: 340px; }
+  .overlay-kpi-val { font-size: 2rem; }
+  .overlay-kpi-block { flex-wrap: wrap; gap: 8px; }
+}
+/* Align the filters with the actual masthead height at every breakpoint. */
+.editorial-masthead { height: 52px; }
+.global-filter-bar { top: 52px; }
+
+/* Keep the guide inside the story rail when the chart takes more width. */
+@media (min-width: 769px) and (max-width: 1250px) {
+  .story-column { max-height: calc(100dvh - 440px); }
+  .dino-guide-floating { left: 20px; width: 260px; max-width: 260px; }
+  .dino-floating-wrapper { width: 100%; gap: 8px; }
+  .dino-floating-figure { width: 40px; height: 60px; }
+  .dino-floating-bubble {
+    flex: 1;
+    min-width: 0;
+    max-width: 212px;
+    max-height: 240px;
+    overflow-y: auto;
+  }
+}
