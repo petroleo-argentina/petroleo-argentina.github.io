@@ -1,0 +1,75 @@
+/* Reading rhythm, warm surfaces and a quieter photographic opening. */
+:root {
+  --ink-primary: #f5efe3;
+  --ink-secondary: #d5d0c5;
+  --ink-muted: #ada99f;
+  --panel-bg: rgba(27, 27, 24, .94);
+  --panel-bg-translucent: rgba(27, 27, 24, .90);
+  --panel-bg-opaque: rgba(27, 27, 24, .97);
+  --panel-bg-elevated: rgba(48, 47, 40, .9);
+  --panel-radius: 3px;
+  --panel-shadow: 0 6px 24px rgba(0, 0, 0, .22);
+}
+.hero-splash-screen {
+  justify-content: flex-start;
+  padding: clamp(28px, 7vw, 110px);
+  overflow-y: auto;
+  background-position: 65% center;
+}
+.hero-splash-backdrop {
+  background: linear-gradient(90deg, rgba(19, 22, 22, .94), rgba(19, 22, 22, .66) 48%, rgba(19, 22, 22, .12));
+}
+.hero-splash-content { max-width: 640px; text-align: left; align-items: flex-start; margin-block: auto; }
+.hero-kicker { color: #dfc99d; letter-spacing: .09em; font-size: .76rem; margin-bottom: 28px; }
+.hero-title { font-size: clamp(3.5rem, 8.5vw, 7.6rem); line-height: .94; letter-spacing: -.045em; text-shadow: none; }
+.hero-subtitle { color: #e2bc7f; font-size: clamp(1.8rem, 3vw, 2.8rem); margin: 22px 0; }
+.hero-dek { max-width: 440px; font-size: 1.12rem; line-height: 1.75; color: #e4e0d5; text-shadow: none; margin-bottom: 30px; }
+.hero-start-btn { background: #e1bd82; box-shadow: none; padding: 15px 24px; }
+.hero-start-btn:hover { background: #efd4a9; box-shadow: none; transform: none; }
+.hero-reading-note { font-size: .8rem; line-height: 1.6; max-width: 350px; color: #c6c0b4; margin-top: 17px; }
+.hero-load-status:empty { display: none; }
+.hero-load-status { color: #ffdaa9; margin-top: 18px; line-height: 1.5; }
+.hero-footer-meta { max-width: 500px; justify-content: flex-start; gap: 8px; font-size: .7rem; line-height: 1.6; margin-top: 36px; }
+.hero-photo-credit { display: block; font-size: .65rem; color: #b8b5ac; }
+.hero-photo-credit a { color: #d7bc91; }
+.story-headline { font-size: 1.9rem; font-weight: 500; line-height: 1.08; margin-bottom: 18px; }
+.story-lead { font-family: var(--font-serif); font-size: 1.12rem; line-height: 1.6; color: var(--ink-secondary); }
+.story-column { max-height: calc(100dvh - 360px); }
+.column-content-body { min-height: 0; overflow-y: auto; }
+.column-nav-footer { flex-shrink: 0; }
+.overlay-kicker, .filter-field-label, .stacked-label { text-transform: none; letter-spacing: .015em; }
+.overlay-kicker { font-size: .7rem; color: var(--ink-muted); }
+.overlay-title { font-family: var(--font-serif); font-weight: 500; font-size: 1.35rem; }
+.filter-field-group, .filter-chip-select, .mode-toggle-group { border-radius: 3px; }
+.dino-floating-img, .dino-floating-figure { animation: none; }
+.dino-floating-bubble { box-shadow: none; }
+.column-location-tag, .overlay-source-tag, .overlay-scope-tag, .timeline-axis-caption { color: #b8b3a7; }
+button:focus-visible, a:focus-visible, select:focus-visible { outline: 2px solid #e2bc7f; outline-offset: 4px; }
+@media (max-width: 768px) {
+  body.editorial-body { height: auto; min-height: 100dvh; overflow-y: auto; padding-bottom: 110px; }
+  .story-column-wrap { position: relative; inset: auto; margin: 108px 12px 16px; width: calc(100% - 24px); }
+  .story-column { max-height: none; }
+  .dino-guide-floating { position: relative; inset: auto; margin: 0 12px 16px; width: calc(100% - 24px); }
+  .dino-floating-wrapper { width: 100%; }
+  .dino-floating-figure { width: 48px; height: 58px; }
+  .dino-floating-img { width: 48px; height: 58px; object-fit: contain; }
+  .dino-floating-bubble { max-width: none; flex: 1; }
+  .chart-overlay-panel { position: relative; inset: auto; margin: 0 12px 24px; width: calc(100% - 24px); max-height: none; }
+  #journey-tracker-nav { display: none; }
+  .editorial-timeline-tray { background: #1b1b18; }
+  .hero-splash-screen { padding: 32px 24px; align-items: flex-start; }
+  .hero-splash-backdrop { position: fixed; background: rgba(16, 21, 22, .78); }
+  .hero-splash-content { min-height: min-content; }
+  .hero-title { font-size: clamp(3.1rem, 14vw, 5rem); }
+  .hero-kicker { font-size: .65rem; margin-bottom: 24px; }
+  .hero-subtitle { margin: 18px 0; }
+  .hero-dek { font-size: 1rem; line-height: 1.6; margin-bottom: 24px; }
+  .hero-footer-meta { align-items: flex-start; margin-top: 24px; }
+  .hero-start-btn { width: auto; }
+  .story-headline { font-size: 1.5rem; margin-bottom: 10px; }
+  .story-lead { font-size: 1rem; line-height: 1.45; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-splash-content { animation: none; }
+  .hero-splash-screen { transition: none; }
+}

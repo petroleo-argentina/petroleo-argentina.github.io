@@ -1,94 +1,60 @@
-# Petróleo en Argentina: Del pozo al país
-### Atlas Cartográfico 3D & Crónica de Datos (1950 – 2025)
+# Petróleo en Argentina · Del pozo al país
 
-[![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square&logo=github)](https://github.com)
-[![Licencia](https://img.shields.io/badge/Datos-Secretar%C3%ADa%20de%20Energ%C3%ADa%20(Res.%20319%2F93)-green?style=flat-square)](#fuentes-de-datos)
-[![WebGL](https://img.shields.io/badge/3D%20Terrain-MapLibre%20GL%20JS-orange?style=flat-square)](https://maplibre.org)
+Una historia en mapas sobre la producción petrolera argentina entre 1950 y 2025, con ocho capítulos y filtros para explorar los datos.
 
-**Petróleo en Argentina: Del pozo al país** es una plataforma interactiva de periodismo de datos y cartografía 3D que reconstruye 75 años de producción petrolera nacional, la migración geográfica del centro productivo y la revolución técnica del shale en Vaca Muerta.
+[Ver la web](https://petroleo-argentina.github.io/) · [Repositorio](https://github.com/petroleo-argentina/petroleo-argentina.github.io)
 
----
+## El recorrido
 
-## 🗺️ Características Principales
+1. El regreso: la producción histórica y el máximo de 1998.
+2. El mapa se mueve: el cambio entre cuencas.
+3. El punto de quiebre: convencional y no convencional.
+4. Pocos pozos, mucho petróleo: concentración de la producción.
+5. Cómo cambió el pozo: longitud horizontal y fracturas.
+6. Generaciones de pozos: producción a edades comparables.
+7. Del pozo al país: comercio exterior y empleo.
+8. Argentina en el mundo: comparación internacional de la EIA, con corte en 2024.
 
-- **Cartografía 3D y Relieve**: Motor WebGL (MapLibre GL JS v4.7.1) con modelo digital de elevación (DEM Terrarium de AWS) con sombreado de pendientes a 315° y exageración vertical de 1.22x.
-- **7 Capítulos Narrativos (Scrollytelling)**:
-  1. *El regreso* (1950–2025): Serie histórica nacional y comparación contra el récord de 1998.
-  2. *El mapa se mueve*: Migración del Golfo San Jorge hacia la Cuenca Neuquina.
-  3. *El punto de quiebre*: El cruce histórico donde el no convencional superó al convencional.
-  4. *Pocos pozos, mucho petróleo*: Concentración de Pareto (el 1% de los pozos aporta el 22,9% del crudo).
-  5. *Cómo cambió el pozo*: Evolución de ramas horizontales, toneladas de arena y etapas de fractura.
-  6. *Generaciones de pozos*: Curvas de declino por cohorte de perforación (2015 a 2024).
-  7. *Del pozo al país*: Balanza comercial energética, divisas y empleo formal.
-- **Argentinosaurus Guía Conceptual**: Mascota ilustrada y comentarista de datos reactiva que aporta hallazgos concretos y cifras auditadas según los filtros activos.
-- **Controles Interactivos**:
-  - Línea temporal dinámica (scrubber de 1950 a 2025) con animación continua.
-  - Filtros por cuenca, tipo de recurso, corte de Pareto y métricas de fracturación.
-  - Modo relato guiado y modo exploración libre con aislamiento de scroll.
-- **100% Autónomo**: Funciona tanto en servidores locales como desplegado de forma 100% estática en **GitHub Pages** (incluye bundle offline con 1.86 MB de datos oficiales precompilados).
+## Abrir en tu PC
 
----
+Desde la carpeta del repositorio, con Python instalado:
 
-## 🚀 Despliegue en GitHub Pages
-
-Este repositorio incluye un flujo de trabajo automatizado de **GitHub Actions** (`.github/workflows/deploy.yml`) que publica la aplicación automáticamente en GitHub Pages.
-
-### Pasos para publicar:
-1. Crea un repositorio en tu cuenta de GitHub (por ejemplo: `petroleo-argentina`).
-2. Sube el código a GitHub:
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: publicación inicial de Petróleo en Argentina"
-   git branch -M main
-   git remote add origin https://github.com/TU_USUARIO/petroleo-argentina.git
-   git push -u origin main
-   ```
-3. En GitHub, ve a **Settings** > **Pages**:
-   - En **Build and deployment > Source**, selecciona **GitHub Actions**.
-4. ¡Listo! En 1 a 2 minutos la aplicación estará en vivo en:
-   ```
-   https://TU_USUARIO.github.io/petroleo-argentina/
-   ```
-
-*(Nota: si prefieres la opción clásica «Deploy from a branch», selecciona la rama `main` y la carpeta `/(root)`. El archivo `index.html` redirigirá automáticamente a la aplicación).*
-
----
-
-## 💻 Ejecución Local
-
-### Opción 1: Servidor estático rápido (sin dependencias)
-Solo necesitas Python 3 instalado:
-```bash
+```sh
 python -m http.server 8080 --directory frontend
 ```
-Luego abre tu navegador en [http://localhost:8080](http://localhost:8080).
 
-### Opción 2: Con Backend FastAPI
-Para desarrollo completo con endpoints de API:
-1. Instala las dependencias:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Ejecuta el servidor uvicorn:
-   ```bash
-   python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --reload
-   ```
-   *(En Windows puedes simplemente hacer doble clic en `iniciar_servidor.bat`).*
-3. Accede a [http://127.0.0.1:8000](http://127.0.0.1:8000).
+Abrí http://localhost:8080. Los datos están incluidos en `frontend/data_bundle.js`; los mapas de fondo y las bibliotecas de gráficos necesitan internet.
 
----
+Para trabajar con la API:
 
-## 📊 Fuentes de Datos
+```sh
+pip install -r requirements.txt
+python -m uvicorn api.main:app --host 127.0.0.1 --port 8000
+```
 
-- **Secretaría de Energía de la Nación**: Registros oficiales pozo por pozo bajo la Resolución 319/93 (Capítulo IV).
-- **SESCO**: Sistema de Estadística y Control de Operaciones Hidrocarburíferas.
-- **INDEC**: Estadísticas de Intercambio Comercial Argentino (ICA) y comercio exterior de combustibles y lubricantes.
-- **MTEySS**: Estadísticas de empleo registrado en el sector hidrocarburífero de la provincia de Neuquén.
+Abrí http://127.0.0.1:8000. También está disponible `iniciar_servidor.bat` en Windows.
+Podés copiar `frontend/config.example.js` como `frontend/config.js` para configurar CARTO; sin token se utiliza el mapa de respaldo. No pongas credenciales privadas en archivos que recibe el navegador.
 
----
+## Comprobar antes de publicar
 
-## 📄 Licencia y Créditos
+```sh
+python -m pytest tests -q
+node --check frontend/app.js
+node --test tests/frontend.test.cjs
+```
 
-- Datos públicos abiertos conforme a las normativas de acceso a la información de la República Argentina.
-- Fotografías de portada y archivo bajo licencias Creative Commons (créditos detallados en la portada de la aplicación).
+Las pruebas de API se ejecutan sin levantar un servidor. La prueba antigua de Edge es opcional: requiere Selenium, su controlador, el servidor en el puerto 8000 y `RUN_BROWSER_TESTS=1`. Revisá también la interfaz en escritorio y celular cuando cambien los estilos.
+
+GitHub Actions ejecuta las comprobaciones antes de publicar `frontend/` en Pages. En GitHub, elegí **Settings → Pages → Source → GitHub Actions**. Los cambios subidos a `main` o `master` activan ese proceso; también puede ejecutarse manualmente.
+
+## Datos y estructura
+
+- `frontend/`: web, estilos y datos empaquetados para publicación estática.
+- `api/static_data/`: datos de la API. Las pruebas comparan estos archivos con el paquete de la web.
+- `etl/` y `analysis/`: descarga, transformación y análisis.
+- `docs/`: metodología, fuentes y decisiones.
+- `tests/`: controles de datos, API y carga de la web.
+
+Fuentes: Secretaría de Energía (Resolución 319/93 y SESCO), INDEC, estadísticas de empleo y EIA para la comparación internacional. Consultá las notas de cada gráfico para conocer su cobertura; las series no necesariamente terminan en el mismo año.
+
+Fotografía de portada: Horacio Fernandez, «Petrosaurios», Aguada Pichana, Añelo, bajo CC BY 3.0. La portada conserva los enlaces a la imagen original y su licencia.

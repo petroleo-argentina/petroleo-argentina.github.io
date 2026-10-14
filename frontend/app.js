@@ -75,6 +75,7 @@ let worldData = null;
 let isDataLoaded = false;
 let hasEnteredTour = false;
 let pendingTourEntry = false;
+let loadFailed = false;
 
 // Chart.js Active Instances
 let overlayChartInstance = null;
@@ -174,11 +175,11 @@ const CHAPTERS = [
     getInsight: (state) => {
       const yr = state.year || 2025;
       if (yr === 2025) {
-        return "En 2025, la producción nacional totalizó 46.438,5 miles de m³ (~798.500 barriles/día), con un crecimiento interanual del +12,8% vs 2024. Representa el mayor volumen anual extraído en 26 años (desde el máximo histórico de 1998 con 49.147,7 miles de m³), traccionado por el récord no convencional de Vaca Muerta.";
+        return "Argentina volvió a producir más petróleo: 46.438,5 miles de m³ en 2025, un 12,8% más que el año anterior. Pero el récord sigue siendo de 1998. El gráfico permite ver cuánto cayó la producción y cómo empezó a recuperarse.";
       }
       const item = timelineData.find(d => d.anio === yr);
       const valStr = item ? Number(item.prod_pet_miles_m3).toLocaleString('es-AR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : '—';
-      return `En el año ${yr}, la extracción nacional totalizó ${valStr} miles de m³, dentro de la serie histórica oficial auditada (1950–2025).`;
+      return `En ${yr}, Argentina produjo ${valStr} miles de m³ de petróleo. Mové el año para seguir los cambios de esta historia.`;
     },
     getKPI: (state) => {
       const yr = state.year || 2025;
@@ -337,7 +338,7 @@ const CHAPTERS = [
     getInsight: (state) => {
       const yr = state.year || 2025;
       if (yr >= 2023) {
-        return "La producción argentina cambió de centro de gravedad: Neuquén pasó del 20,4% en 2010 al 64,7% en 2025, desplazando al Golfo San Jorge como principal cuenca hidrocarburífera.";
+        return "El mapa también cuenta el cambio. La cuenca Neuquina pasó de aportar el 20,4% del petróleo en 2010 al 64,7% en 2025. El Golfo San Jorge, que durante años ocupó el primer lugar, quedó detrás.";
       }
       return `En ${yr}, la distribución territorial mostraba una cuota de Neuquén en ascenso progresivo frente a las cuencas convencionales maduras del sur.`;
     },
@@ -448,7 +449,7 @@ const CHAPTERS = [
     ],
     timelineRange: { min: 2015, max: 2025, defaultYear: 2023, step: 1, ticks: [2015, 2017, 2019, 2021, 2023, 2025] },
     getInsight: (state) => {
-      return "En noviembre de 2023 la extracción no convencional superó por primera vez a la convencional (51,11%). En 2025 consolidó el 62,92% del volumen total, con un 99,1% originado en Shale (Vaca Muerta).";
+      return "En noviembre de 2023 ocurrió el cruce: por primera vez, el petróleo no convencional superó al convencional. En 2025 ya representaba casi el 63% de la producción. Seguí las dos curvas para ver cuándo se abrió la diferencia.";
     },
     getKPI: (state) => {
       return {
@@ -572,13 +573,13 @@ const CHAPTERS = [
     getInsight: (state) => {
       const cut = state.filters.paretoCutoff || 50;
       if (cut === 50) {
-        return "De los 26.219 pozos activos en el país durante 2025, apenas el 3,48% (912 pozos) concentró la mitad exacta de la producción nacional de petróleo.";
+        return "La mitad del petróleo de 2025 salió de apenas 912 pozos. Había 26.219 con producción registrada en todo el país. Esa distancia entre unos pocos pozos y el resto ayuda a entender el peso de Vaca Muerta.";
       } else if (cut === 66.7) {
         return "2.021 pozos (el 7,71% del total) explican las dos terceras partes (66,7%) de la producción total argentina.";
       } else if (cut === 1) {
-        return "El 1% superior (262 pozos de élite) aporta por sí solo el 22,86% del petróleo total del país.";
+        return "Los 262 pozos que más produjeron —el 1% del total— aportaron el 22,86% del petróleo del país.";
       }
-      return "Distribución completa sobre el parque nacional de 26.219 pozos activos con extracción registrada.";
+      return "Cada pozo aporta una cantidad distinta. Esta curva reúne los 26.219 pozos con producción registrada y muestra cuánto pesa cada grupo en el total.";
     },
     getKPI: (state) => {
       const cut = state.filters.paretoCutoff || 50;
@@ -671,7 +672,7 @@ const CHAPTERS = [
     ],
     timelineRange: { min: 2016, max: 2025, defaultYear: 2025, step: 1, ticks: [2016, 2018, 2020, 2022, 2024, 2025] },
     getInsight: (state) => {
-      return "El crecimiento provino de multiplicar la escala del pozo: ramas laterales de más de 3.000 metros en el subsuelo y estimulación masiva de 50 etapas de fractura.";
+      return "Bajo la superficie, los pozos también cambiaron. Sus tramos horizontales superan los 3.000 metros y las fracturas se realizan en unas 50 etapas. Son dos maneras de acercarse a una pregunta: qué hace falta para sacar más petróleo.";
     },
     getKPI: (state) => {
       const yr = state.year || 2025;
@@ -809,7 +810,7 @@ const CHAPTERS = [
     callouts: [],
     timelineRange: { min: 2015, max: 2024, defaultYear: 2024, step: 1, ticks: [2015, 2018, 2021, 2024] },
     getInsight: (state) => {
-      return "Un pozo perforado en 2024 acumuló una mediana de 33.427 m³ en sus primeros 12 meses: 14 veces más petróleo que la cohorte piloto de 2015 (2.297 m³), producto del aprendizaje operativo.";
+      return "Los pozos de 2024 produjeron una mediana de 33.427 m³ en su primer año, frente a 2.297 m³ en el grupo de 2015. Compararlos a la misma edad permite ver qué cambió entre una generación y otra.";
     },
     getKPI: (state) => {
       return {
@@ -907,7 +908,7 @@ const CHAPTERS = [
     callouts: [],
     timelineRange: { min: 2007, max: 2024, defaultYear: 2024, step: 1, ticks: [2007, 2011, 2015, 2019, 2024] },
     getInsight: (state) => {
-      return "La expansión productiva transformó la logística y las cuentas externas: +83% de empleo formal registrado en hidrocarburos en Neuquén y superávit comercial energético de US$ 5.600M en 2024.";
+      return "El petróleo no termina en el pozo. También aparece en el empleo y en el comercio exterior. En 2024, el saldo del intercambio energético fue positivo en US$ 5.600 millones. Acá podés explorar esas otras dimensiones.";
     },
     getKPI: (state) => {
       return {
@@ -1035,12 +1036,12 @@ const CHAPTERS = [
       const isLatam = state.filters.worldScope === 'latam';
       const isEvol = state.filters.worldView === 'evolution';
       if (isEvol) {
-        return "Entre 2017 y 2024, la producción argentina de crudo creció un +46,1% (Índice 146,1), traccionada por el desarrollo masivo de Vaca Muerta, mientras que la extracción petrolera mundial apenas se movió un +0,9% (Índice 100,9) en ese mismo septenio.";
+        return "Entre 2017 y 2024, Argentina aumentó su producción de crudo un +46,1%. En el mundo, el aumento fue de apenas 0,9%. Ambas líneas parten de 100 para que podamos comparar el ritmo de crecimiento.";
       }
       if (isLatam) {
-        return "En América Latina (total regional: 8.790,8 miles de barriles diarios), Argentina ocupa el 5° lugar con 700,8 miles bpd (8,0% regional), consolidándose como el principal polo de crecimiento no convencional del subcontinente frente a la madurez de cuencas tradicionales.";
+        return "Argentina ocupa el quinto lugar entre los productores de América Latina. En 2024 aportó el 8% del crudo regional: 700,8 mil barriles diarios, según la EIA.";
       }
-      return "En el balance mundial oficial (EIA 2024), Argentina se ubica en el puesto #22 entre 99 países productores con 700,8 miles de barriles diarios de petróleo crudo y condensado, aportando el 0,86% del total global (81.958 miles bpd).";
+      return "¿Qué lugar ocupa Argentina fuera de la región? En 2024 fue el productor número 22 entre los 99 países relevados por la EIA. Su aporte fue el 0,86% del crudo y condensado mundial.";
     },
     getKPI: (state) => {
       const isLatam = state.filters.worldScope === 'latam';
@@ -1072,7 +1073,7 @@ const CHAPTERS = [
       const isLatam = state.filters.worldScope === 'latam';
       const isEvol = state.filters.worldView === 'evolution';
       return {
-        kicker: isEvol ? 'DINÁMICA COMPARADA 2015—2024' : (isLatam ? 'RANKING LATINOAMERICANO 2024' : 'RANKING MUNDIAL 2024'),
+        kicker: isEvol ? 'EL CRECIMIENTO DESDE 2017' : (isLatam ? 'RANKING LATINOAMERICANO 2024' : 'RANKING MUNDIAL 2024'),
         title: isEvol ? 'Crecimiento de Producción (Base 100 = 2017)' : (isLatam ? 'Principales Productores de América Latina' : 'Principales Productores Mundiales de Crudo'),
         sourceNote: 'Fuente: U.S. EIA · International Energy Statistics (Crude & Condensate)',
         scopeNote: 'Cobertura Homogénea 2024 (99 Países)',
@@ -1333,10 +1334,11 @@ async function initScrollyPlatform() {
   setupOverlayPanelEvents();
   buildJourneyTrack();
 
-  // Initialize MapLibre GL JS Map
-  initMapLibreMap();
-
   try {
+    if (typeof maplibregl === 'undefined' || typeof Chart === 'undefined') {
+      throw new Error('No se pudieron cargar las herramientas del mapa y los gráficos.');
+    }
+    initMapLibreMap();
     const [kpis, timeline, monthly, cohorts, wells, fractures, macro, basins, concessions, trajectories, pipelines, facilities, flaring, operators, world] = await Promise.all([
       loadResource('/api/kpis', 'kpis'),
       loadResource('/api/timeline', 'timeline_1950_2025'),
@@ -1371,6 +1373,9 @@ async function initScrollyPlatform() {
     operatorsData = operators;
     worldData = world;
 
+    if (!timeline.length || !monthly.length || !world) {
+      throw new Error('Los datos del recorrido están incompletos.');
+    }
     isDataLoaded = true;
 
     const onReady = () => {
@@ -1390,8 +1395,10 @@ async function initScrollyPlatform() {
       setTimeout(() => {
         if (!mapReady) {
           console.warn("MapLibre load event timed out; proceeding with initial step");
-          mapReady = true;
-          onReady();
+          // The story can render while the map finishes loading. Do not
+          // create layers on a style that is not ready yet.
+          if (pendingTourEntry) executeTourEntry();
+          else goToStep(0);
         }
       }, 4000);
     } else {
@@ -1400,9 +1407,17 @@ async function initScrollyPlatform() {
 
   } catch (error) {
     console.error("Error loading scrollytelling data:", error);
-    isDataLoaded = true;
-    if (pendingTourEntry) {
-      executeTourEntry();
+    isDataLoaded = false;
+    pendingTourEntry = false;
+    loadFailed = true;
+    const message = document.getElementById('hero-load-status');
+    if (message) message.textContent = 'No pudimos cargar el recorrido. Revisá tu conexión y volvé a intentar.';
+    const button = document.getElementById('btn-start-tour');
+    if (button) {
+      button.disabled = false;
+      button.removeAttribute('aria-busy');
+      button.setAttribute('aria-label', 'Volver a intentar cargar el recorrido');
+      button.textContent = 'Volver a intentar';
     }
   }
 }
@@ -1416,8 +1431,10 @@ async function loadResource(url, bundleKey) {
     return window.DATA_BUNDLE[bundleKey];
   }
 
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 12000);
   try {
-    const res = await fetch(url);
+    const res = await fetch(url, { signal: controller.signal });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.json();
   } catch (err) {
@@ -1425,6 +1442,8 @@ async function loadResource(url, bundleKey) {
       return window.DATA_BUNDLE[bundleKey];
     }
     throw err;
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
@@ -2472,7 +2491,7 @@ function updateOverlayPanel(chapter) {
   // Header kicker & title
   const kicker = document.getElementById('overlay-kicker');
   const title = document.getElementById('overlay-title');
-  if (kicker) kicker.textContent = ovCfg.kicker || 'MÉTRICA EDITORIAL';
+  if (kicker) kicker.textContent = ovCfg.kicker || 'Los datos';
   if (title) title.textContent = ovCfg.title || chapter.title;
 
   // View toggles
@@ -2796,18 +2815,23 @@ function getDinoDataCommentary(chapter, state) {
   // -------------------------------------------------------------
   if (num === '01' || id === 'regreso') {
     const tr = state.filters.timeRange;
-    if (tr === '2017') {
-      return {
-        kicker: 'UN DATO MÁS',
-        text: `En el ciclo no convencional (2017—2025), la producción nacional se disparó un <strong class="dino-highlight">+65,8%</strong>, pasando de 28.007 miles de m³ a 46.438 miles de m³ impulsada por Vaca Muerta.`,
-        source: 'Fuente: Secretaría de Energía / SESCO (2017—2025)'
-      };
-    } else if (tr === '2000') {
-      return {
-        kicker: 'UN DATO MÁS',
-        text: `En lo que va del siglo XXI (2000—2025), la producción transitó un declino continuo del 33% hasta tocar piso en 2014, antes de iniciar su <strong class="dino-highlight">recuperación vertical</strong> con el shale.`,
-        source: 'Fuente: Secretaría de Energía / SESCO (2000—2025)'
-      };
+    if (tr === '2017' || tr === '2000') {
+      const startYear = Number(tr);
+      const endYear = Math.max(startYear, yr);
+      const first = timelineData.find(d => d.anio === startYear);
+      const last = timelineData.find(d => d.anio === endYear);
+      if (first && last && first.prod_pet_miles_m3 > 0) {
+        const change = (last.prod_pet_miles_m3 / first.prod_pet_miles_m3 - 1) * 100;
+        const pct = Math.abs(change).toLocaleString('es-AR', { maximumFractionDigits: 1 });
+        const amount = value => Number(value).toLocaleString('es-AR', { maximumFractionDigits: 0 });
+        return {
+          kicker: 'UN DATO MÁS',
+          text: endYear === startYear
+            ? `En ${startYear}, el país produjo <strong class="dino-highlight">${amount(first.prod_pet_miles_m3)} miles de m³</strong>. Avanzá en el tiempo para comparar.`
+            : `Entre ${startYear} y ${endYear}, la producción ${change >= 0 ? 'creció' : 'bajó'} un <strong class="dino-highlight">${pct}%</strong>: pasó de ${amount(first.prod_pet_miles_m3)} a ${amount(last.prod_pet_miles_m3)} miles de m³.`,
+          source: `Fuente: Secretaría de Energía / SESCO (${startYear}—${endYear})`
+        };
+      }
     }
 
     const maxRecord = 49147.7; // Récord histórico absoluto de 1998
@@ -3130,7 +3154,7 @@ function scheduleNextAutoTour() {
 }
 
 function executeTourEntry() {
-  if (hasEnteredTour) return;
+  if (hasEnteredTour || !isDataLoaded) return;
   hasEnteredTour = true;
 
   const splash = document.getElementById('hero-splash');
@@ -3162,6 +3186,10 @@ function setupHeroSplash() {
   if (!startBtn || !splash) return;
 
   const handleStart = (e) => {
+    if (loadFailed) {
+      window.location.reload();
+      return;
+    }
     if (e && e.type === 'click') {
       // Natural click
     }

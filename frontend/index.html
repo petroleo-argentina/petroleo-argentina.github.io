@@ -10,13 +10,13 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Petróleo en Argentina: Del pozo al país">
   <meta property="og:description" content="75 años de producción para entender cómo cambió el mapa petrolero argentino.">
-  <meta property="og:image" content="https://petroleo-argentina.github.io/frontend/assets/portada_vaca_muerta.jpg">
+  <meta property="og:image" content="https://petroleo-argentina.github.io/assets/portada_vaca_muerta.jpg">
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Petróleo en Argentina: Del pozo al país">
   <meta name="twitter:description" content="75 años de producción para entender cómo cambió el mapa petrolero argentino.">
-  <meta name="twitter:image" content="https://petroleo-argentina.github.io/frontend/assets/portada_vaca_muerta.jpg">
+  <meta name="twitter:image" content="https://petroleo-argentina.github.io/assets/portada_vaca_muerta.jpg">
   
   <!-- Typography V9: Alegreya (Editorial Serif) + Archivo (Grotesque Sans & Tabular Figures) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +29,7 @@
   
   <!-- Custom Editorial CSS -->
   <link rel="stylesheet" href="./index.css">
+  <link rel="stylesheet" href="./editorial.css">
 </head>
 <body class="editorial-body">
 
@@ -36,19 +37,23 @@
   <div id="hero-splash" class="hero-splash-screen" role="region" aria-label="Portada editorial">
     <div class="hero-splash-backdrop" aria-hidden="true"></div>
     <div class="hero-splash-content">
-      <h1 class="hero-title">PETRÓLEO EN ARGENTINA</h1>
+      <p class="hero-kicker">Una historia en mapas · 1950–2025</p>
+      <h1 class="hero-title">Petróleo en<br>Argentina</h1>
       <h2 class="hero-subtitle">Del pozo al país</h2>
-      <p class="hero-dek">75 años de producción para entender cómo cambió el mapa petrolero argentino.</p>
+      <p class="hero-dek">De los pozos del sur al impulso de Vaca Muerta. ¿Cómo cambió el petróleo que produce el país, y qué nos cuenta ese cambio?</p>
       
       <div class="hero-actions">
-        <button id="btn-start-tour" class="hero-start-btn" title="Iniciar recorrido narrativo" aria-label="Comenzar el recorrido narrativo por los 7 capítulos">
-          <span>Comenzar el recorrido</span>
+        <button id="btn-start-tour" class="hero-start-btn" title="Iniciar recorrido narrativo" aria-label="Comenzar el recorrido narrativo por los 8 capítulos">
+          <span>Empezar la historia</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </button>
       </div>
 
+      <p class="hero-reading-note">Ocho capítulos. Podés seguir el relato o detenerte a explorar los datos.</p>
+      <p id="hero-load-status" class="hero-load-status" role="alert"></p>
+
       <div class="hero-footer-meta">
-        <span>Basado en registros oficiales pozo por pozo (Resolución 319/93)</span>
+        <span>Datos de la Secretaría de Energía y otras fuentes oficiales</span>
         <span class="meta-dot">·</span>
         <span>1950 – 2025</span>
         <span class="meta-dot">·</span>
@@ -160,7 +165,7 @@
   <section class="chart-overlay-panel" id="chart-overlay-panel" aria-label="Visualización de datos y métricas">
     <header class="overlay-header">
       <div class="overlay-header-info">
-        <span class="overlay-kicker" id="overlay-kicker">MÉTRICA EDITORIAL</span>
+        <span class="overlay-kicker" id="overlay-kicker">Los datos</span>
         <h3 class="overlay-title" id="overlay-title">Evolución de la Producción</h3>
       </div>
       <div class="overlay-header-actions">

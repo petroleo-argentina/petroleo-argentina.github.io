@@ -6,7 +6,10 @@ and the audit requirements specified in Section 31 of reordenamiento_y_redisenio
 """
 
 import json
-import urllib.request
+from fastapi.testclient import TestClient
+from api.main import app
+
+client = TestClient(app)
 from pathlib import Path
 import pytest
 import pandas as pd
@@ -223,8 +226,8 @@ def test_api_endpoints_live():
     for ep in endpoints:
         url = f"http://127.0.0.1:8000{ep}"
         try:
-            req = urllib.request.urlopen(url, timeout=3)
-            assert req.status == 200, f"Endpoint {ep} returned HTTP {req.status}"
+            req = client.get(ep)
+            assert req.status_code == 200, f"Endpoint {ep} returned HTTP {req.status_code}"
         except Exception as e:
             pytest.fail(f"Failed to query {url}: {e}")
 
@@ -253,8 +256,8 @@ def test_carto_config_and_fallback_style():
 
     # Check style served over HTTP 200
     style_url = "http://127.0.0.1:8000/styles/petroleo-map-style.json"
-    req = urllib.request.urlopen(style_url, timeout=3)
-    assert req.status == 200, f"Fallback style returned HTTP {req.status}"
+    req = client.get("/styles/petroleo-map-style.json")
+    assert req.status_code == 200, f"Fallback style returned HTTP {req.status_code}"
 
     # Verify no token is hardcoded in app.js or index.html
     app_js = (BASE_DIR / "frontend" / "app.js").read_text(encoding="utf-8")
@@ -264,9 +267,9 @@ def test_carto_config_and_fallback_style():
 def test_pareto_api_endpoint_and_milestones():
     """Validates the /api/pareto endpoint returns accurate milestones from audited 2025 data."""
     url = "http://127.0.0.1:8000/api/pareto"
-    req = urllib.request.urlopen(url, timeout=3)
-    assert req.status == 200
-    data = json.loads(req.read().decode("utf-8"))
+    req = client.get("/api/pareto")
+    assert req.status_code == 200
+    data = req.json()
     
     assert data["total_pozos"] == 26219
     assert data["pareto_wells_50_pct"] == 912
@@ -583,7 +586,7 @@ def test_v8_hero_splash_accessibility_and_focus():
     assert 'aria-label="Portada editorial"' in html_content
     
     # Start button has accessibility title and aria-label
-    assert 'aria-label="Comenzar el recorrido narrativo por los 7 capítulos"' in html_content
+    assert 'aria-label="Comenzar el recorrido narrativo por los 8 capítulos"' in html_content
     
     # Double-click prevention and loading state
     assert "let isDataLoaded = false;" in app_js
@@ -594,6 +597,7 @@ def test_v8_hero_splash_accessibility_and_focus():
     assert "splash.setAttribute('inert', '')" in app_js
     assert "nextBtn.focus()" in app_js
 
+@pytest.mark.skipif(__import__("os").environ.get("RUN_BROWSER_TESTS") != "1", reason="Opt-in browser test; requires a running server and Edge driver")
 def test_v8_headless_browser_entry_regression():
     """Live headless browser test: checks page load, absence of errors, click, and Chapter 01 transition."""
     from selenium import webdriver
